@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class FuelManager : MonoBehaviour
 {
+
+    public static FuelManager instance;
+
     // tutorial: https://www.youtube.com/watch?v=BLfNP4Sc_iA
     public float maxFuel = 100;
     public float _currentFuel;
@@ -41,6 +44,14 @@ public class FuelManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,11 +59,7 @@ public class FuelManager : MonoBehaviour
         InvokeRepeating("DepleteFuel", 1.0f, fuelDepletionRate);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void DepleteFuel()
     {
