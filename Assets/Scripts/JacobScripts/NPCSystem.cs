@@ -29,17 +29,17 @@ public class NPCSystem : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
         if (switchingLanes == false)
         {
-            float randomTime = Random.Range(0, 500);
+            float randomTime = Random.Range(0, 350);
 
             // Move left/right with A/D keys
-            if (randomTime == 350)
+            if (randomTime == 250 && laneWidth != 0)
             {
                 switchingLanes = true;
                 blinkLeft = true;
                 blinkRight = false;
                 StartCoroutine(BlinkLeftRight());
             }
-            else if (randomTime == 125)
+            else if (randomTime == 125 && laneWidth != 2)
             {
                 switchingLanes = true;
                 blinkLeft = false;
