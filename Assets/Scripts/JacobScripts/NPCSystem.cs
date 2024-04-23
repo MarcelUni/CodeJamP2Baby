@@ -24,7 +24,6 @@ public class NPCSystem : MonoBehaviour
             Vector3 explosionDirection = Random.onUnitSphere;
             explosionDirection.y = Mathf.Abs(explosionDirection.y); // Ensure the direction is in the upper half
 
-
             // Apply force to the object in the random direction
             Rigidbody rb = GetComponent<Rigidbody>();
             if (rb != null)
