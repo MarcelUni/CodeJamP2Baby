@@ -29,7 +29,7 @@ public class NPCSystem : MonoBehaviour
         lightRight.SetActive(false);
 
 
-        // Randomly choose a lane index between 0 and 2
+        // Randomly choose a lane index between -1 and 3
         int randomLaneIndex = Random.Range(-1, 3);
 
         // Change to the randomly selected lane index
