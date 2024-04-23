@@ -5120,7 +5120,8 @@ MonoBehaviour:
   collider: {fileID: 14089991}
   speed: 10
   explosionForce: 500
-  explosionParticlesPrefab: {fileID: 0}
+  explosionParticlesPrefab: {fileID: 1887491868}
+  laneWidth: 2
 --- !u!65 &14089991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12277,6 +12278,7 @@ MonoBehaviour:
   speed: 10
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 690463122}
+  laneWidth: 2
 --- !u!1 &449556054
 GameObject:
   m_ObjectHideFlags: 0
@@ -12959,6 +12961,7 @@ MonoBehaviour:
   speed: 10
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 661345554}
+  laneWidth: 2
 --- !u!199 &552150854
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -23840,6 +23843,7 @@ MonoBehaviour:
   speed: 10
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 1571530637}
+  laneWidth: 2
 --- !u!65 &718171864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28728,6 +28732,12 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198263872644927810, guid: 64891a0eb28db934898420d80ca07cb3,
     type: 3}
   m_PrefabInstance: {fileID: 477092231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1887491868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1722758305}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1887491869 stripped
 Transform:

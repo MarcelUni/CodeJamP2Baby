@@ -9,12 +9,85 @@ public class NPCSystem : MonoBehaviour
     [SerializeField] private float speed = 5f; // Adjust this to control the speed of movement
     [SerializeField] private float explosionForce = 10f; // Adjust this to control the force of the explosion
     [SerializeField] private GameObject explosionParticlesPrefab; // Reference to the particle system prefab
+    public float laneWidth = 2f; // Width of each lane
+    private int currentLane = 1; // Current lane index (0, 1, 2)
 
+    private bool switchingLanes = false;
+    private bool blinkLeft;
+    private bool blinkRight;
+    [SerializeField] private GameObject lightLeft;
+    [SerializeField] private GameObject lightRight;
 
-    void Update()
+    private void Start()
+    {
+        lightLeft.SetActive(false);
+        lightRight.SetActive(false);
+    }
+    void FixedUpdate()
     {
         // Move the object along its forward direction (in local space)
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        if (switchingLanes == false)
+        {
+            float randomTime = Random.Range(0, 500);
+
+            // Move left/right with A/D keys
+            if (randomTime == 350)
+            {
+                switchingLanes = true;
+                blinkLeft = true;
+                blinkRight = false;
+                StartCoroutine(BlinkLeftRight());
+            }
+            else if (randomTime == 125)
+            {
+                switchingLanes = true;
+                blinkLeft = false;
+                blinkRight = true;
+                StartCoroutine(BlinkLeftRight());
+            }
+        }
+        
+       
+    }
+
+    void ChangeLane(int direction)
+    {
+        int newLane = Mathf.Clamp(currentLane + direction, 0, 2);
+        float targetX = (newLane - 1) * laneWidth;
+        transform.position = new Vector3(targetX, transform.position.y, transform.position.z);
+        currentLane = newLane;
+        switchingLanes = false;
+    }
+
+    private IEnumerator BlinkLeftRight()
+    {
+        if (blinkLeft)
+        {
+            yield return new WaitForSeconds(0.5f);
+            lightLeft.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            lightLeft.SetActive(false);
+            yield return new WaitForSeconds(0.5f);
+            lightLeft.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            lightLeft.SetActive(false);
+            ChangeLane(1);
+        }
+        else if (blinkRight)
+        {
+            yield return new WaitForSeconds(0.5f);
+            lightRight.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            lightRight.SetActive(false);
+            yield return new WaitForSeconds(0.5f);
+            lightRight.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            lightRight.SetActive(false);
+            ChangeLane(-1);
+        }
+                
+                    
     }
 
     void OnCollisionEnter(Collision collision)
