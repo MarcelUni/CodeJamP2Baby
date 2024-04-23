@@ -24225,7 +24225,7 @@ GameObject:
   - component: {fileID: 1279986930}
   - component: {fileID: 1279986929}
   m_Layer: 0
-  m_Name: ObjectSpawner
+  m_Name: RoadSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40538,7 +40538,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2038144888}
   - component: {fileID: 2038144890}
-  - component: {fileID: 2038144889}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -40561,21 +40560,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 100251263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2038144889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038144887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f06e3de8ac67d546adcddfb8080f7fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightLeft: {fileID: 0}
-  lightRight: {fileID: 0}
-  sirenLightSwitchSpeed: 0
 --- !u!108 &2038144890
 Light:
   m_ObjectHideFlags: 0
