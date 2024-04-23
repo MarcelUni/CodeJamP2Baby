@@ -53,6 +53,9 @@ public class RoadGenerator : MonoBehaviour
         newPosition.y = spawnYPosition;
         newSegment.transform.position = newPosition;
 
+        // Set the road segment as static
+        newSegment.isStatic = true;
+
         // Update the reference to the end of the last segment
         lastSegmentEnd = newSegment.transform;
     }

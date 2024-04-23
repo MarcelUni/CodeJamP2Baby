@@ -1518,6 +1518,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hatchback (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 866322452631755648, guid: 9018656783966cf4987b24035475ffee,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4054,6 +4059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hatchback (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 866322452631755648, guid: 9018656783966cf4987b24035475ffee,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13655,6 +13665,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hatchback
       objectReference: {fileID: 0}
+    - target: {fileID: 866322452631755648, guid: 9018656783966cf4987b24035475ffee,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18910,6 +18925,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sedan
       objectReference: {fileID: 0}
+    - target: {fileID: 8614791492568433753, guid: 26b7bda133963f64f82f19a58599e021,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8990930419828989667, guid: 26b7bda133963f64f82f19a58599e021,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21145,6 +21165,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hatchback (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 866322452631755648, guid: 9018656783966cf4987b24035475ffee,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22428,6 +22453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sedan (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614791492568433753, guid: 26b7bda133963f64f82f19a58599e021,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8990930419828989667, guid: 26b7bda133963f64f82f19a58599e021,
         type: 3}
@@ -27236,6 +27266,8 @@ MonoBehaviour:
   - {fileID: 8614791492568433753, guid: 26b7bda133963f64f82f19a58599e021, type: 3}
   spawnPoints:
   - {fileID: 1579273369}
+  playerTransform: {fileID: 100251263}
+  despawnDistance: 50
   spawnInterval: 1
 --- !u!4 &1407774237
 Transform:
@@ -29786,6 +29818,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sedan (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8614791492568433753, guid: 26b7bda133963f64f82f19a58599e021,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8990930419828989667, guid: 26b7bda133963f64f82f19a58599e021,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30467,6 +30504,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sedan (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614791492568433753, guid: 26b7bda133963f64f82f19a58599e021,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8990930419828989667, guid: 26b7bda133963f64f82f19a58599e021,
         type: 3}
@@ -34682,6 +34724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hatchback (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 866322452631755648, guid: 9018656783966cf4987b24035475ffee,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
