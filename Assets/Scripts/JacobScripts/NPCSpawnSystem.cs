@@ -31,7 +31,7 @@ public class NPCSpawnSystem : MonoBehaviour
         // Choose a random spawn point from the spawnPoints array
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-        // Spawn the NPC at the chosen spawn point
-        Instantiate(npcPrefab, spawnPoint.position, Quaternion.identity);
+        // Spawn the NPC at the chosen spawn point with a rotation of 180 degrees
+        GameObject spawnedNPC = Instantiate(npcPrefab, spawnPoint.position, Quaternion.Euler(0f, 180f, 0f));
     }
 }

@@ -9,6 +9,7 @@ public class NPCSystem : MonoBehaviour
     [SerializeField] private float speed = 5f; // Adjust this to control the speed of movement
     [SerializeField] private float explosionForce = 10f; // Adjust this to control the force of the explosion
     [SerializeField] private GameObject explosionParticlesPrefab; // Reference to the particle system prefab
+    
     public float laneWidth = 2f; // Width of each lane
     private int currentLane = 1; // Current lane index (0, 1, 2)
 
@@ -18,10 +19,23 @@ public class NPCSystem : MonoBehaviour
     [SerializeField] private GameObject lightLeft;
     [SerializeField] private GameObject lightRight;
 
+    private GameManager gameManager;
+
     private void Start()
     {
+        gameManager = GameObject.FindAnyObjectByType<GameManager>();
+
         lightLeft.SetActive(false);
         lightRight.SetActive(false);
+
+
+        // Randomly choose a lane index between 0 and 2
+        int randomLaneIndex = Random.Range(-1, 3);
+
+        // Change to the randomly selected lane index
+        ChangeLane(randomLaneIndex);
+
+
     }
     void FixedUpdate()
     {
@@ -112,6 +126,7 @@ public class NPCSystem : MonoBehaviour
             if (explosionParticlesPrefab != null)
             {
                 Instantiate(explosionParticlesPrefab, collision.contacts[0].point, Quaternion.identity);
+                gameManager.RemoveHP();
             }
 
             // You can add any other actions or behaviors here

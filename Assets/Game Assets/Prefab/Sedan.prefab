@@ -894,7 +894,7 @@ MonoBehaviour:
   speed: 10
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 2420590002243070847}
-  laneWidth: 4
+  laneWidth: 6
   lightLeft: {fileID: 6095374408176852691}
   lightRight: {fileID: 866590482355537582}
 --- !u!198 &3534962473256276460
