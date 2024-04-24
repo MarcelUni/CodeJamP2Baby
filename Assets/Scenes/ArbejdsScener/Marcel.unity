@@ -512,7 +512,7 @@ MonoBehaviour:
   - {fileID: 5521322239699116125, guid: 328b3b9bcaab30f46bb3de06055221df, type: 3}
   - {fileID: 648068940985449685, guid: 6d26deaf3a4129f4da8477f1a9d36ec6, type: 3}
   - {fileID: 705864328678670254, guid: f8778d8e892bff845913e524c19ca7dd, type: 3}
-  bigHouseThreshold: 500
+  bigHouseThreshold: 50
   removeDistance: 50
   environment: {fileID: 940920062}
 --- !u!1001 &1746140793702768799
