@@ -26196,6 +26196,13 @@ MonoBehaviour:
   npcPrefabs:
   - {fileID: 866322452631755648, guid: 9018656783966cf4987b24035475ffee, type: 3}
   - {fileID: 8614791492568433753, guid: 26b7bda133963f64f82f19a58599e021, type: 3}
+  - {fileID: 3997326107397367805, guid: daec182d3f76ce74f82bfd198f01609a, type: 3}
+  - {fileID: 2658375631960562563, guid: cab717eef15fe5540b1bd2685998c6cb, type: 3}
+  - {fileID: 261569558913212766, guid: 9a227b66b71d8924fab6a617a76252b3, type: 3}
+  - {fileID: 4194057230548692037, guid: 63ec5a47ee81cfb45a962439d42d8f7a, type: 3}
+  - {fileID: 8016763712341518930, guid: a1c4b318a8a9374469461ca62662f396, type: 3}
+  - {fileID: 5803317979220034874, guid: 68fa71e3b3bf0fd48820587969ef33a5, type: 3}
+  - {fileID: 7111496756926285222, guid: 3b9901dcb2f831447bfd8e1a3a3eb8c6, type: 3}
   spawnPoints:
   - {fileID: 8937606567471470062}
   playerTransform: {fileID: 675984505917346447}
@@ -41801,8 +41808,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9252567, y: 2.6203456, z: 2.0100663}
-  m_Center: {x: -0.011631966, y: 1.2788241, z: 1.0774006}
+  m_Size: {x: 1.9252567, y: 2.48247, z: 2.5106268}
+  m_Center: {x: -0.011631966, y: 1.3477619, z: 0.8271203}
 --- !u!114 &3448474506872292005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42380,9 +42387,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.1005223
-  m_Height: 3.1814275
+  m_Height: 2.2010446
   m_Direction: 1
-  m_Center: {x: -0.15915969, y: 1.0907137, z: -0.44136274}
+  m_Center: {x: -0.15915966, y: 1.5809052, z: -0.44136274}
 --- !u!1 &5333997451581317452
 GameObject:
   m_ObjectHideFlags: 0
