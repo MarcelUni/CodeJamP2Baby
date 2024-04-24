@@ -14,9 +14,11 @@ public class Controller : MonoBehaviour
 
     private Rigidbody rb;
     private bool canJump = true;
+    private Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -41,11 +43,11 @@ public class Controller : MonoBehaviour
         // Move left/right with A/D keys
         if (Input.GetKeyDown(KeyCode.A))
         {
-            ChangeLane(-1);
+            LeftLane();
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            ChangeLane(1);
+            RightLane();
         }
 
         // Jump with Space key
@@ -58,12 +60,21 @@ public class Controller : MonoBehaviour
 
     public void RightLane()
     {
+        if(currentLane == 2)
+            return;
+
         ChangeLane(1);
+        anim.SetTrigger("Right");
+    
     }
 
     public void LeftLane()
     {
+        if(currentLane == 0)
+            return;
+
         ChangeLane(-1);
+        anim.SetTrigger("Left");
     }
 
     //JUMPING 
