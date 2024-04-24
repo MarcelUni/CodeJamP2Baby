@@ -1,62 +1,62 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FuelSpawningScript : MonoBehaviour
 {
-    public GameObject[] FuelPrefab; // Array of NPC prefabs to spawn
+    public GameObject[] fuelPrefabs; // Array of fuel prefabs to spawn
     public Transform[] spawnPoints; // Array of spawn points
 
     public Transform playerTransform; // Reference to the player's transform
-    public float despawnDistance = 50f; // Distance at which road segments are despawned
+    public float despawnDistance = 50f; // Distance at which fuel objects are despawned
 
-    public float spawnInterval = 2f; // Time interval between spawns
+    public float minSpawnInterval = 7f; // Minimum time interval between spawns
+    public float maxSpawnInterval = 15f; // Maximum time interval between spawns
     private float nextSpawnTime; // Time for the next spawn
 
-
-
+    // Start is called before the first frame update
     void Start()
     {
-        nextSpawnTime = Time.time + spawnInterval; // Set initial spawn time
+        // Set initial spawn time to a random value between minSpawnInterval and maxSpawnInterval
+        nextSpawnTime = Time.time + Random.Range(minSpawnInterval, maxSpawnInterval);
     }
 
+    // Update is called once per frame
     void Update()
     {
-        // Check if it's time to spawn a new NPC
+        // Check if it's time to spawn a new fuel object
         if (Time.time >= nextSpawnTime)
         {
-            SpawnNPC(); // Spawn a new NPC
-            nextSpawnTime = Time.time + spawnInterval; // Set time for the next spawn
-
+            SpawnFuel(); // Spawn a new fuel object
+            // Set time for the next spawn to a random value between minSpawnInterval and maxSpawnInterval
+            nextSpawnTime = Time.time + Random.Range(minSpawnInterval, maxSpawnInterval);
         }
 
-        // Despawn road segments that are too far behind the player
-        DespawnOldNpc();
+        // Despawn fuel objects that are too far behind the player
+        DespawnOldFuel();
     }
 
-
-    void SpawnNPC()
+    // Method to spawn a new fuel object
+    void SpawnFuel()
     {
-        float randomTime = Random.Range(0, 350);
-        // Choose a random NPC prefab from the npcPrefabs array
-        GameObject npcPrefab = FuelPrefab[Random.Range(0, FuelPrefab.Length)];
+        // Choose a random fuel prefab from the fuelPrefabs array
+        GameObject fuelPrefab = fuelPrefabs[Random.Range(0, fuelPrefabs.Length)];
 
         // Choose a random spawn point from the spawnPoints array
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-        // Spawn the NPC at the chosen spawn point with a rotation of 180 degrees
-        GameObject spawnedNPC = Instantiate(npcPrefab, spawnPoint.position, Quaternion.Euler(0f, 180f, 0f));
+        // Instantiate the fuel object at the chosen spawn point with a rotation of 180 degrees
+        Instantiate(fuelPrefab, spawnPoint.position, Quaternion.Euler(0f, 180f, 0f));
     }
 
-    void DespawnOldNpc()
+    // Method to despawn old fuel objects
+    void DespawnOldFuel()
     {
-        // Iterate through all spawned NPCs
-        foreach (GameObject npc in GameObject.FindGameObjectsWithTag("NPC"))
+        // Iterate through all spawned fuel objects
+        foreach (GameObject fuelObject in GameObject.FindGameObjectsWithTag("Fuel"))
         {
-            // Check if the NPC is too far behind the player
-            if (npc.transform.position.z < playerTransform.position.z - despawnDistance)
+            // Check if the fuel object is too far behind the player
+            if (fuelObject.transform.position.z < playerTransform.position.z - despawnDistance)
             {
-                Destroy(npc); // Despawn the NPC
+                Destroy(fuelObject); // Despawn the fuel object
             }
         }
     }

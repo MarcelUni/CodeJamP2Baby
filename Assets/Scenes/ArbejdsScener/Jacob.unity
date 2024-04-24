@@ -25297,13 +25297,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd2d52f20fb7da46a206f1e4f7dcdc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FuelPrefab:
+  fuelPrefabs:
   - {fileID: 9004409157532913578, guid: 78ba102d78a10ad47b6be612e16f8e91, type: 3}
   spawnPoints:
   - {fileID: 1720050574}
   playerTransform: {fileID: 675984505917346447}
   despawnDistance: 50
-  spawnInterval: 10
+  minSpawnInterval: 3
+  maxSpawnInterval: 6
 --- !u!1 &1419908950
 GameObject:
   m_ObjectHideFlags: 0
