@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     public GameObject _player;
     public GameObject _gameOverScreen;
     public GameObject fuelBar;
-
+    public int winDistance;
+    [SerializeField] private RandomEnvironment randomEnvironment;
     //Using a get set method to control the player's HP but it can't go below 0 or exceed 3
     public int PlayerHP
     {
@@ -147,10 +148,10 @@ public class GameManager : MonoBehaviour
     public void GameWinCheck()
     {
         
-        if (_player.transform.position.z >= 1000)
+        if (_player.transform.position.z >= winDistance)
         {
-            ScenesManager.instance.LoadScene("Win Cutscene");
-            Debug.Log("Win!!");
+
+            randomEnvironment.SpawnHospital();
         }
 
     }

@@ -17,7 +17,9 @@ public class RandomEnvironment : MonoBehaviour
     [SerializeField] private float bigHouseThreshold = 250;
     [SerializeField] private float removeDistance = 25;
     [SerializeField] private GameObject environment;
+    [SerializeField] private GameManager gameManager;
 
+    [SerializeField] private GameObject hospitalPrefab;
 
     void Start()
     {
@@ -45,7 +47,7 @@ public class RandomEnvironment : MonoBehaviour
         if(bigHouses.Count == 0)
             bigCity = false;
 
-        if(transform.position.z - lastZ > instantiateDistance)
+        if(transform.position.z - lastZ > instantiateDistance && gameManager._player.transform.position.z != gameManager.winDistance)
         {
             Vector3 position = new Vector3(0.6f, 0, lastZ + addToZ);
 
@@ -62,6 +64,7 @@ public class RandomEnvironment : MonoBehaviour
             RoadChunks.Add(newChunk);
             lastZ = newChunk.transform.position.z;
         }
+        
 
         RemoveChunks();
     }
@@ -77,6 +80,18 @@ public class RandomEnvironment : MonoBehaviour
             RoadChunks.RemoveAt(0);
             Destroy(toRemove);
         }
+    }
+
+    public void SpawnHospital()
+    {
+        Vector3 position = new Vector3(0.6f, 0, lastZ + addToZ);
+
+        GameObject HospitalInstantiate = hospitalPrefab;
+
+        GameObject newChunk = Instantiate(HospitalInstantiate, position, Quaternion.identity);
+        newChunk.transform.parent = environment.transform;
+        RoadChunks.Add(newChunk);
+        lastZ = newChunk.transform.position.z;
     }
 
 }

@@ -69,14 +69,14 @@ public class NPCSystem : MonoBehaviour
             float randomTime = Random.Range(0, 350);
 
             // Move left/right with A/D keys
-            if (randomTime == 250 && currentLane != 2 && !IsNPCInLane(currentLane + 1))
+            if (randomTime == 250 && currentLane != 2 && isCollidingWithTrigger == false)
             {
                 switchingLanes = true;
                 blinkLeft = true;
                 blinkRight = false;
                 StartCoroutine(BlinkLeftRight());
             }
-            else if (randomTime == 125 && currentLane != 0 && !IsNPCInLane(currentLane - 1))
+            else if (randomTime == 125 && currentLane != 0 && isCollidingWithTrigger == false)
             {
                 switchingLanes = true;
                 blinkLeft = false;
@@ -84,10 +84,10 @@ public class NPCSystem : MonoBehaviour
                 StartCoroutine(BlinkLeftRight());
             }
         }
-    
 
 
-}
+
+    }
 
     void ChangeLane(int direction)
     {
@@ -97,29 +97,25 @@ public class NPCSystem : MonoBehaviour
     }
 
 
-    private bool IsNPCInLane(int laneIndex)
-{
-    // Calculate the position where the NPC would be if it changes to the specified lane
-    float targetX = (laneIndex - 1) * laneWidth;
-    Vector3 targetPosition = new Vector3(targetX, transform.position.y, transform.position.z);
-
-    // Calculate the direction of the lane
-    Vector3 laneDirection = targetPosition - transform.position;
-    laneDirection.Normalize();
-
-    // Cast a ray in the direction of the lane to check for collisions
-    RaycastHit hit;
-    if (Physics.Raycast(transform.position, laneDirection, out hit, laneWidth, npcLayer))
+    private void OnTriggerEnter(Collider other)
     {
-        // Check if the hit object is not the NPC itself
-        if (hit.collider.gameObject != gameObject)
+        // Check if the trigger collider overlaps with an NPC collider
+        if (other.CompareTag("NPC"))
         {
-            return true;
+            // If it does, prevent the NPC from switching lanes
+            isCollidingWithTrigger = true;
         }
     }
 
-    return false;
-}
+    private void OnTriggerExit(Collider other)
+    {
+        // Check if the trigger collider stops overlapping with an NPC collider
+        if (other.CompareTag("NPC"))
+        {
+            // If it does, allow the NPC to switch lanes again
+            isCollidingWithTrigger = false;
+        }
+    }
 
 
     private IEnumerator BlinkLeftRight()

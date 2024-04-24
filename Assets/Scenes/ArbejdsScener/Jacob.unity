@@ -2534,6 +2534,7 @@ MonoBehaviour:
   _player: {fileID: 9056379054986192919}
   _gameOverScreen: {fileID: 1418646644}
   fuelBar: {fileID: 1236126940}
+  winDistance: 1
 --- !u!65 &1455680184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3156,7 +3157,6 @@ Transform:
   - {fileID: 26712913}
   - {fileID: 870951485}
   - {fileID: 1445734659}
-  - {fileID: 2015751261}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1928663574
@@ -3432,7 +3432,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1800888096}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2061652316
 GameObject:
@@ -4665,6 +4665,9 @@ MonoBehaviour:
   bigHouseThreshold: 20
   removeDistance: 50
   environment: {fileID: 2015751260}
+  gameManager: {fileID: 1445734660}
+  hospitalPrefab: {fileID: 1208338212056041311, guid: 3ef7289946b204a5793aa0a6014e4dc6,
+    type: 3}
 --- !u!136 &7556039652981377302
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5022,6 +5025,7 @@ SceneRoots:
   - {fileID: 733916326}
   - {fileID: 8567368662314201773}
   - {fileID: 4758316843734039141}
+  - {fileID: 2015751261}
   - {fileID: 1800888096}
   - {fileID: 1709493028}
   - {fileID: 2116131673}
