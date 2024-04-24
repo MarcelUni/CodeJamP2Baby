@@ -1,11 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
 
-public class NPCSpawnSystem : MonoBehaviour
+public class FuelSpawningScript : MonoBehaviour
 {
-    public GameObject[] npcPrefabs; // Array of NPC prefabs to spawn
-    private NPCSystem npcSystem;
+    public GameObject[] FuelPrefab; // Array of NPC prefabs to spawn
     public Transform[] spawnPoints; // Array of spawn points
 
     public Transform playerTransform; // Reference to the player's transform
@@ -14,12 +13,10 @@ public class NPCSpawnSystem : MonoBehaviour
     public float spawnInterval = 2f; // Time interval between spawns
     private float nextSpawnTime; // Time for the next spawn
 
-    public float spawnedNPCAmount = 0;
 
 
     void Start()
     {
-        npcSystem = GameObject.FindAnyObjectByType<NPCSystem>();
         nextSpawnTime = Time.time + spawnInterval; // Set initial spawn time
     }
 
@@ -30,12 +27,6 @@ public class NPCSpawnSystem : MonoBehaviour
         {
             SpawnNPC(); // Spawn a new NPC
             nextSpawnTime = Time.time + spawnInterval; // Set time for the next spawn
-           
-        }
-
-        if (spawnedNPCAmount == 10)
-        {
-            StartCoroutine(SpawnNpcDoubleLane());
 
         }
 
@@ -43,29 +34,18 @@ public class NPCSpawnSystem : MonoBehaviour
         DespawnOldNpc();
     }
 
-    private IEnumerator SpawnNpcDoubleLane()
-    {
-
-        npcSystem.randomLane1 = 3;
-        npcSystem.randomLane2 = 3;
-        SpawnNPC(); // Spawn a new NPC
-        spawnedNPCAmount = 0;
-        yield return new WaitForSeconds(0.1f);
-
-    }
 
     void SpawnNPC()
     {
         float randomTime = Random.Range(0, 350);
         // Choose a random NPC prefab from the npcPrefabs array
-        GameObject npcPrefab = npcPrefabs[Random.Range(0, npcPrefabs.Length)];
+        GameObject npcPrefab = FuelPrefab[Random.Range(0, FuelPrefab.Length)];
 
         // Choose a random spawn point from the spawnPoints array
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
         // Spawn the NPC at the chosen spawn point with a rotation of 180 degrees
         GameObject spawnedNPC = Instantiate(npcPrefab, spawnPoint.position, Quaternion.Euler(0f, 180f, 0f));
-        spawnedNPCAmount ++;
     }
 
     void DespawnOldNpc()
@@ -80,5 +60,4 @@ public class NPCSpawnSystem : MonoBehaviour
             }
         }
     }
-
 }
