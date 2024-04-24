@@ -209,7 +209,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f0ab94093e61cfc4abc0d3579186438a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -165.8
+      value: -220.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0ab94093e61cfc4abc0d3579186438a,
         type: 3}
@@ -429,7 +429,7 @@ MonoBehaviour:
   speed: 10
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 7110979735070463316}
-  laneWidth: 6
+  laneWidth: 3
   laneChangeSpeed: 50
   isCollidingWithTrigger: 0
   randomLane1: -1
@@ -5803,6 +5803,11 @@ PrefabInstance:
         type: 3}
       propertyPath: prewarm
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198656289721292014, guid: 64891a0eb28db934898420d80ca07cb3,
+        type: 3}
+      propertyPath: stopAction
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 198656289721292014, guid: 64891a0eb28db934898420d80ca07cb3,
         type: 3}

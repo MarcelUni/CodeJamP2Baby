@@ -152,6 +152,7 @@ public class NPCSystem : MonoBehaviour
             if (explosionParticlesPrefab != null)
             {
                 Instantiate(explosionParticlesPrefab, collision.contacts[0].point, Quaternion.identity);
+                Destroy(explosionParticlesPrefab);
                 gameManager.RemoveHP();
             }
 
