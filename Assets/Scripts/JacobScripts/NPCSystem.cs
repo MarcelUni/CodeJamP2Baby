@@ -9,7 +9,7 @@ public class NPCSystem : MonoBehaviour
     [SerializeField] private float speed = 5f; // Adjust this to control the speed of movement
     [SerializeField] private float explosionForce = 10f; // Adjust this to control the force of the explosion
     [SerializeField] private GameObject explosionParticlesPrefab; // Reference to the particle system prefab
-    
+
     public float laneWidth = 2f; // Width of each lane
     private int currentLane = 1; // Current lane index (0, 1, 2)
 
@@ -28,7 +28,6 @@ public class NPCSystem : MonoBehaviour
         lightLeft.SetActive(false);
         lightRight.SetActive(false);
 
-
         // Randomly choose a lane index between -1 and 3
         int randomLaneIndex = Random.Range(-1, 3);
 
@@ -39,21 +38,21 @@ public class NPCSystem : MonoBehaviour
     }
     void FixedUpdate()
     {
-        // Move the object along its forward direction (in local space)
+        // Move the object along its forward direction (din local space)
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
         if (switchingLanes == false)
         {
             float randomTime = Random.Range(0, 350);
 
             // Move left/right with A/D keys
-            if (randomTime == 250 && laneWidth != 0)
+            if (randomTime == 250 && currentLane != 2)
             {
                 switchingLanes = true;
                 blinkLeft = true;
                 blinkRight = false;
                 StartCoroutine(BlinkLeftRight());
             }
-            else if (randomTime == 125 && laneWidth != 2)
+            else if (randomTime == 125 && currentLane != 0)
             {
                 switchingLanes = true;
                 blinkLeft = false;
@@ -61,8 +60,8 @@ public class NPCSystem : MonoBehaviour
                 StartCoroutine(BlinkLeftRight());
             }
         }
-        
-       
+
+
     }
 
     void ChangeLane(int direction)
@@ -100,8 +99,8 @@ public class NPCSystem : MonoBehaviour
             lightRight.SetActive(false);
             ChangeLane(-1);
         }
-                
-                    
+
+
     }
 
     void OnCollisionEnter(Collision collision)
@@ -117,7 +116,7 @@ public class NPCSystem : MonoBehaviour
             Rigidbody rb = GetComponent<Rigidbody>();
             if (rb != null)
             {
-                
+
                 rb.AddForce(explosionDirection * explosionForce, ForceMode.Impulse);
                 collider.enabled = false;
             }
@@ -134,3 +133,4 @@ public class NPCSystem : MonoBehaviour
         }
     }
 }
+
