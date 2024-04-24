@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
                 heartDisplay(_playerHP);
                 GameOver();
                 Debug.Log("Game Over");
+                AudioManageryTest.instance.PlaySFX("CrashDead");
+                AudioManageryTest.instance.StopMusic("GameMusic");
             }
             else if (value > 3)
             {
@@ -41,13 +43,13 @@ public class GameManager : MonoBehaviour
                 _playerHP = value;
                 heartDisplay(_playerHP);
                 
-                /*
+                
                 if (_playerHP == 1)
                 {
-                    //Uncomment når AudioManager er korrekt navngivet
-                    UnMuteSiren();
+                    //Uncomment nï¿½r AudioManager er korrekt navngivet
+                    AudioManageryTest.instance.UnmuteSiren("Siren");
                 }
-                */
+                
             }
         }
     }
@@ -77,6 +79,9 @@ public class GameManager : MonoBehaviour
 
         _gameOverScreen.SetActive(false);
         fuelBar.SetActive(true);
+        AudioManageryTest.instance.PlayMusic("GameMusic");
+        AudioManageryTest.instance.PlayAmbience("AmbienceSuburbs");
+        AudioManageryTest.instance.PlaySiren("Siren");
 
     }
 
@@ -118,9 +123,13 @@ public class GameManager : MonoBehaviour
 
         _gameOverScreen.SetActive(true);
         fuelBar.SetActive(false);
+        
+        AudioManageryTest.instance.UnmuteSiren("Siren");
+        AudioManageryTest.instance.StopMusic("GameMusic");
+        
 
 
-        //Uncomment når spil sættes op, og GameOver Screen er klar
+        //Uncomment nï¿½r spil sï¿½ttes op, og GameOver Screen er klar
         
         /*
         if (GameObject.Find("GameOver") == null)

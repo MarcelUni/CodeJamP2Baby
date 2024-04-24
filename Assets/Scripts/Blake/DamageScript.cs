@@ -11,6 +11,8 @@ public class DamageScript : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
+        AudioManageryTest.instance.PlaySFX("CrashLoseHP");
+        
         if(collision.gameObject.name == "small_car(Clone)" || 
            collision.gameObject.name == "sport_car(Clone)" || 
            collision.gameObject.name == "taxi(Clone)" || 

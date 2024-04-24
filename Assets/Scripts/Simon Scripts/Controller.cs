@@ -44,10 +44,12 @@ public class Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             LeftLane();
+            AudioManageryTest.instance.PlayTireScreech();
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             RightLane();
+            AudioManageryTest.instance.PlayTireScreech();
         }
 
         // Jump with Space key
