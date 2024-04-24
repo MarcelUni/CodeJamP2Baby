@@ -34,14 +34,14 @@ public class DamageScript : MonoBehaviour
            collision.gameObject.name == smallVehicles[4] || 
            collision.gameObject.name == smallVehicles[5])
         { 
-            GameManager.instance.RemoveHP(-1);
+            GameManager.instance.RemoveHP();
             Debug.Log("Life lost");
         }
         else if (collision.gameObject.name == largeVehicles[0] || 
                  collision.gameObject.name == largeVehicles[1] || 
                  collision.gameObject.name == largeVehicles[2])
         {
-            GameManager.instance.RemoveHP(-2);
+            GameManager.instance.RemoveHP();
             Debug.Log("Two Lives lost");
         }
     }
