@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Game.unity
     guid: 81ad1084b9ff06f499d41c7187f55108
+  - enabled: 1
+    path: Assets/Scenes/Win Cutscene.unity
+    guid: d6eb0aed5498fde429d6fd3136cef891
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86520fdac32cbf147bff5e84a4ca4ea3,
       type: 2}
