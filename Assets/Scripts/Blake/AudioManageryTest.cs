@@ -71,18 +71,29 @@ public class AudioManageryTest : MonoBehaviour
             }
             
         }
-        public void PlayTireScreech()
+        public void PlayTireScreech(string name)
         {
-            int rand = Random.Range(0, TireScreechSounds.Length);
+            //int rand = Random.Range(0, TireScreechSounds.Length);
             
             //Sound s = Array.FindIndex(rand, x => x.index == index);
             
-            //Sound s = Array.Find<Sound>(TireScreechSounds, x => x.index == index);
-            Sound s = TireScreechSounds[rand];
             
-            TireScreechSource.PlayOneShot(s.clip);
-            TireScreechSource.Play();
+            Sound s = Array.Find<Sound>(TireScreechSounds, x => x.name == name);
+            if (s == null)
+            {
+                Debug.LogWarning("Sound: " + name + " not found!");
+            }
+            //Sound s = TireScreechSounds[1];
+            else
+            {
+                TireScreechSource.clip = s.clip;
+                TireScreechSource.Play();
+            }
             
+
+            
+
+
         }
         /*{
             Sound s = Array.Find(TireScreechSounds, x => x.name == name);

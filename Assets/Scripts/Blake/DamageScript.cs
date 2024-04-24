@@ -11,7 +11,7 @@ public class DamageScript : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        AudioManageryTest.instance.PlaySFX("CrashLoseHP");
+        
         
         if(collision.gameObject.name == "small_car(Clone)" || 
            collision.gameObject.name == "sport_car(Clone)" || 
@@ -21,6 +21,7 @@ public class DamageScript : MonoBehaviour
            collision.gameObject.name == "Sedan(Clone)")
         { 
             GameManager.instance.RemoveHP(1);
+            AudioManageryTest.instance.PlaySFX("CrashHP");
             Debug.Log("Life lost");
         }
         else if (collision.gameObject.name == "truck(Clone)" || 
@@ -28,8 +29,11 @@ public class DamageScript : MonoBehaviour
                  collision.gameObject.name == "bus(Clone)")
         {
             GameManager.instance.RemoveHP(2);
+            AudioManageryTest.instance.PlaySFX("CrashHP");
             Debug.Log("Two Lives lost");
         }
+        
+        
     }
     
 }
