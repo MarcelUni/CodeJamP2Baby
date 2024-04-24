@@ -12,6 +12,12 @@ public class NPCSystem : MonoBehaviour
 
     public float laneWidth = 2f; // Width of each lane
     private int currentLane = 1; // Current lane index (0, 1, 2)
+    private int targetLane = 1; // Target lane for lane change
+    public float laneChangeSpeed = 50f; // Duration of lane change in seconds
+    public bool isCollidingWithTrigger = false;
+
+    public int randomLane1 = -1;
+    public int randomLane2 = 3;
 
     private bool switchingLanes = false;
     private bool blinkLeft;
@@ -29,18 +35,34 @@ public class NPCSystem : MonoBehaviour
         lightRight.SetActive(false);
 
         // Randomly choose a lane index between -1 and 3
-        int randomLaneIndex = Random.Range(-1, 3);
+        int randomLaneIndex = Random.Range(randomLane1, randomLane2);
 
         // Change to the randomly selected lane index
         ChangeLane(randomLaneIndex);
 
 
     }
+
+
     void FixedUpdate()
     {
         // Move the object along its forward direction (din local space)
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        if (switchingLanes == false)
+
+        if (currentLane != targetLane)
+        {
+            float targetX = (targetLane - 1) * laneWidth;
+            float newX = Mathf.MoveTowards(transform.position.x, targetX, laneChangeSpeed * Time.deltaTime);
+            transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+
+            // If the player reached the target lane, update the current lane
+            if (Mathf.Approximately(transform.position.x, targetX))
+            {
+                currentLane = targetLane;
+            }
+        }
+
+        if (switchingLanes == false && isCollidingWithTrigger == false)
         {
             float randomTime = Random.Range(0, 350);
 
@@ -67,10 +89,15 @@ public class NPCSystem : MonoBehaviour
     void ChangeLane(int direction)
     {
         int newLane = Mathf.Clamp(currentLane + direction, 0, 2);
-        float targetX = (newLane - 1) * laneWidth;
-        transform.position = new Vector3(targetX, transform.position.y, transform.position.z);
-        currentLane = newLane;
+        targetLane = newLane;
         switchingLanes = false;
+    }
+
+
+    // You can use this method to check if the trigger collider is currently colliding with another trigger collider
+    public bool IsCollidingWithTrigger()
+    {
+        return isCollidingWithTrigger;
     }
 
     private IEnumerator BlinkLeftRight()
@@ -125,6 +152,7 @@ public class NPCSystem : MonoBehaviour
             if (explosionParticlesPrefab != null)
             {
                 Instantiate(explosionParticlesPrefab, collision.contacts[0].point, Quaternion.identity);
+                Destroy(explosionParticlesPrefab);
                 gameManager.RemoveHP();
             }
 
