@@ -25234,8 +25234,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1407774237}
   - component: {fileID: 1407774236}
+  - component: {fileID: 1407774238}
   m_Layer: 0
-  m_Name: NPCSpawnSystem
+  m_Name: SpawnSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25284,6 +25285,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1800888096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1407774238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407774235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd2d52f20fb7da46a206f1e4f7dcdc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FuelPrefab:
+  - {fileID: 9004409157532913578, guid: 78ba102d78a10ad47b6be612e16f8e91, type: 3}
+  spawnPoints:
+  - {fileID: 1720050574}
+  playerTransform: {fileID: 675984505917346447}
+  despawnDistance: 50
+  spawnInterval: 10
 --- !u!1 &1419908950
 GameObject:
   m_ObjectHideFlags: 0
@@ -25996,8 +26016,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHP: 3
-  HP_Display: {fileID: 150454762004120589}
   hearts: {fileID: 232735326383470214}
+  _player: {fileID: 0}
 --- !u!1 &1448417262
 GameObject:
   m_ObjectHideFlags: 0
@@ -30359,6 +30379,89 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713608087}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1720050573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720050574}
+  - component: {fileID: 1720050576}
+  - component: {fileID: 1720050575}
+  m_Layer: 0
+  m_Name: SpawnPointFuel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1720050574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720050573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 5.95, z: 448.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 675984505917346447}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!23 &1720050575
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720050573}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 50435510e9570a24f8ed399caa5d0bda, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1720050576
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720050573}
+  m_Mesh: {fileID: 508246467194302764, guid: c37505d493a767440a516449242bbc2e, type: 3}
 --- !u!1 &1720659475
 GameObject:
   m_ObjectHideFlags: 0
@@ -36214,7 +36317,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -38694,8 +38797,6 @@ MonoBehaviour:
   forwardSpeed: 35
   jumpForce: 10
   laneWidth: 3
-  currentLane: 1
-  targetLane: 1
   laneChangeSpeed: 50
 --- !u!1 &148735567687550307
 GameObject:
@@ -38999,6 +39100,7 @@ Transform:
   - {fileID: 5206170199334676633}
   - {fileID: 5603571529230142711}
   - {fileID: 8937606567471470062}
+  - {fileID: 1720050574}
   - {fileID: 95721614602686553}
   - {fileID: 3975808040010368364}
   m_Father: {fileID: 0}
