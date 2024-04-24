@@ -41,8 +41,11 @@ public class RandomEnvironment : MonoBehaviour
         {
             bigCity = true;
         }
+        
+        if(bigHouses.Count == 0)
+            bigCity = false;
 
-        if(transform.position.z - lastZ > instantiateDistance )
+        if(transform.position.z - lastZ > instantiateDistance)
         {
             Vector3 position = new Vector3(0, 0, lastZ + addToZ);
 
