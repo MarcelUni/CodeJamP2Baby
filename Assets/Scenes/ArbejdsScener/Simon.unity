@@ -687,7 +687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 10
   jumpForce: 10
-  laneWidth: 3
+  laneWidth: 1.7
   laneChangeSpeed: 40
 --- !u!65 &1040173813
 BoxCollider:
@@ -743,23 +743,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1278032081}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1040173820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040173811}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd8d00b0a237824385904e9b1913a19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizVel: 0
-  laneNum: 2
-  controlLocked: n
-  moveL: a
-  moveR: d
 --- !u!1 &1065110761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5221512891652371528, guid: f8778d8e892bff845913e524c19ca7dd,
@@ -1216,10 +1199,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1040173812}
-    - targetCorrespondingSourceObject: {fileID: 156013000798299975, guid: dbd7122d624c5424991432f8abeaa701,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1040173820}
   m_SourcePrefab: {fileID: 100100000, guid: dbd7122d624c5424991432f8abeaa701, type: 3}
 --- !u!1001 &1284745888
 PrefabInstance:
