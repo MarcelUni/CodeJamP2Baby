@@ -9,6 +9,7 @@ TagManager:
   - Ambulance
   - NPC
   - Fuel
+  - Hospital
   layers:
   - Default
   - TransparentFX

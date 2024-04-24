@@ -5,6 +5,7 @@ using UnityEngine;
 public class RandomEnvironment : MonoBehaviour
 {
     private float addToZ = 0;
+    private float addToZHospital = 15f;
     private float lastZ = 0;
     private int smallHouseLength = 0;
     private int bigHouseLenght = 0;
@@ -32,6 +33,7 @@ public class RandomEnvironment : MonoBehaviour
         lastZ = transform.position.z;
 
         addToZ = 23.83068f; // The distance between the chunks
+        
 
         smallHouseLength = smallHouses.Count;
         bigHouseLenght = bigHouses.Count;
@@ -84,11 +86,12 @@ public class RandomEnvironment : MonoBehaviour
 
     public void SpawnHospital()
     {
-        Vector3 position = new Vector3(0.6f, 0, lastZ + addToZ);
+        Vector3 position = new Vector3(-0.6f, -3.64f, lastZ + addToZHospital);
 
         GameObject HospitalInstantiate = hospitalPrefab;
 
         GameObject newChunk = Instantiate(HospitalInstantiate, position, Quaternion.identity);
+        GameObject spawnedChunk = Instantiate(HospitalInstantiate, position, Quaternion.Euler(0f, 180f, 0f));
         newChunk.transform.parent = environment.transform;
         RoadChunks.Add(newChunk);
         lastZ = newChunk.transform.position.z;

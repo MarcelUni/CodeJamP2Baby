@@ -43,14 +43,14 @@ public class GameManager : MonoBehaviour
             {
                 _playerHP = value;
                 heartDisplay(_playerHP);
-                
-                
+
+
                 if (_playerHP == 1)
                 {
                     //Uncomment n�r AudioManager er korrekt navngivet
                     AudioManageryTest.instance.UnmuteSiren("Siren");
                 }
-                
+
             }
         }
     }
@@ -124,14 +124,14 @@ public class GameManager : MonoBehaviour
 
         _gameOverScreen.SetActive(true);
         fuelBar.SetActive(false);
-        
+
         AudioManageryTest.instance.UnmuteSiren("Siren");
         AudioManageryTest.instance.StopMusic("GameMusic");
-        
+
 
 
         //Uncomment n�r spil s�ttes op, og GameOver Screen er klar
-        
+
         /*
         if (GameObject.Find("GameOver") == null)
         {
@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
 
     public void GameWinCheck()
     {
-        
+
         if (_player.transform.position.z >= winDistance)
         {
 

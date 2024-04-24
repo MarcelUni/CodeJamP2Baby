@@ -16,6 +16,8 @@ public class Controller : MonoBehaviour
     private bool canJump = true;
     private Animator anim;
 
+
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -94,5 +96,14 @@ public class Controller : MonoBehaviour
         // Apply jump force
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         canJump = false; // Disable jumping until player lands again
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the trigger collider overlaps with an NPC collider
+        if (other.CompareTag("Hospital"))
+        {
+            ScenesManager.instance.LoadScene("Win Cutscene");
+        }
     }
 }
