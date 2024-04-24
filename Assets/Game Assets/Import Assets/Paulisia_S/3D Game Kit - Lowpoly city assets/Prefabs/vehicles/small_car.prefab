@@ -214,6 +214,9 @@ MonoBehaviour:
   isCollidingWithTrigger: 0
   randomLane1: -1
   randomLane2: 3
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 128
   lightLeft: {fileID: 7822006741959873440}
   lightRight: {fileID: 2434578798877294882}
 --- !u!65 &-3433043698096506636

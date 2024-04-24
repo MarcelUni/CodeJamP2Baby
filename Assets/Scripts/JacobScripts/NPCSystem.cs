@@ -98,29 +98,28 @@ public class NPCSystem : MonoBehaviour
 
 
     private bool IsNPCInLane(int laneIndex)
+{
+    // Calculate the position where the NPC would be if it changes to the specified lane
+    float targetX = (laneIndex - 1) * laneWidth;
+    Vector3 targetPosition = new Vector3(targetX, transform.position.y, transform.position.z);
+
+    // Calculate the direction of the lane
+    Vector3 laneDirection = targetPosition - transform.position;
+    laneDirection.Normalize();
+
+    // Cast a ray in the direction of the lane to check for collisions
+    RaycastHit hit;
+    if (Physics.Raycast(transform.position, laneDirection, out hit, laneWidth, npcLayer))
     {
-        // Calculate the position where the NPC would be if it changes to the specified lane
-        float targetX = (laneIndex - 1) * laneWidth;
-        Vector3 targetPosition = new Vector3(targetX, transform.position.y, transform.position.z);
-
-        // Calculate the direction of the lane
-        Vector3 laneDirection = targetPosition - transform.position;
-        laneDirection.Normalize();
-
-        // Cast a ray in the direction of the lane to check for collisions
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, laneDirection, out hit, laneWidth, npcLayer))
+        // Check if the hit object is not the NPC itself
+        if (hit.collider.gameObject != gameObject)
         {
-            // Check if the hit object is not the NPC itself
-            if (hit.collider.gameObject != gameObject)
-            {
-                return true;
-            }
+            return true;
         }
-
-        return false;
     }
 
+    return false;
+}
 
 
     private IEnumerator BlinkLeftRight()
@@ -155,11 +154,9 @@ public class NPCSystem : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        
         // Check if the collider that was hit has a tag "Ambulance"
         if (collision.collider.CompareTag("Ambulance"))
         {
-            AudioManageryTest.instance.PlaySFX("CrashHP");
             // Calculate a random direction for the explosion in the upper half sphere
             Vector3 explosionDirection = Random.onUnitSphere;
             explosionDirection.y = Mathf.Abs(explosionDirection.y); // Ensure the direction is in the upper half

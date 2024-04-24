@@ -14,8 +14,7 @@ public class NPCSpawnSystem : MonoBehaviour
     private float nextSpawnTime; // Time for the next spawn
 
     public float spawnedNPCAmount = 0;
-    public int randomLane1 = -1;
-    public int randomLane2 = 3;
+
 
     void Start()
     {
