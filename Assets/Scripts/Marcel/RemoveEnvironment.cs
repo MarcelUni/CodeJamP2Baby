@@ -5,7 +5,7 @@ using UnityEngine;
 public class RemoveEnvironment : MonoBehaviour
 {
     [SerializeField] private int removeDistance = 10;
-    [SerializeField] private int activateDistance = 10;
+    [SerializeField] private int activateDistance = 100;
     [SerializeField] private GameObject Environment;
     private List<GameObject> RoadChunks = new List<GameObject>();
     private List<GameObject> inactiveChunks = new List<GameObject>();

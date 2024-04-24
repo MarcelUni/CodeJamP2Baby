@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Rendering.PostProcessing;
+using Random = UnityEngine.Random;
 
 public class AudioManageryTest : MonoBehaviour
 {
-    public Sound[] musicSounds, sfxSounds;
-    public AudioSource musicSource, sfxSource;
+    public Sound[] musicSounds, sirenSound, ambienceSounds, TireScreechSounds, sfxSounds;
+    public AudioSource musicSource, sirenSource, ambienceSource, TireScreechSource, sfxSource;
     
         public static AudioManageryTest instance;
 
@@ -40,6 +41,63 @@ public class AudioManageryTest : MonoBehaviour
             }
             
         }
+        
+        public void PlaySiren(string name)
+        {
+            Sound s = Array.Find(sirenSound, x => x.name == name);
+            if (s == null)
+            {
+                Debug.LogWarning("Sound: " + name + " not found!");
+            }
+            else
+            {
+                sirenSource.clip = s.clip;
+                sirenSource.Play();
+            }
+            
+        }
+        
+        public void PlayAmbience(string name)
+        {
+            Sound s = Array.Find(ambienceSounds, x => x.name == name);
+            if (s == null)
+            {
+                Debug.LogWarning("Sound: " + name + " not found!");
+            }
+            else
+            {
+                ambienceSource.clip = s.clip;
+                ambienceSource.Play();
+            }
+            
+        }
+        public void PlayTireScreech()
+        {
+            int rand = Random.Range(0, TireScreechSounds.Length);
+            
+            //Sound s = Array.FindIndex(rand, x => x.index == index);
+            
+            //Sound s = Array.Find<Sound>(TireScreechSounds, x => x.index == index);
+            Sound s = TireScreechSounds[rand];
+            
+            TireScreechSource.PlayOneShot(s.clip);
+            TireScreechSource.Play();
+            
+        }
+        /*{
+            Sound s = Array.Find(TireScreechSounds, x => x.name == name);
+            if (s == null)
+            {
+                Debug.LogWarning("Sound: " + name + " not found!");
+            }
+            else
+            {
+                TireScreechSource.PlayOneShot(s.clip);
+                TireScreechSource.Play();
+            }
+            
+        }*/
+        
         public void PlaySFX(string name)
         {
             Sound s = Array.Find(sfxSounds, x => x.name == name);
@@ -54,16 +112,26 @@ public class AudioManageryTest : MonoBehaviour
             }
             
         }
-        public void MuteMusic(string name)
+        public void StopMusic(string name)
         {
             Sound s = Array.Find(musicSounds, x => x.name == name);
-            if (musicSource.mute == false)
+            if (musicSource.isPlaying == false)
             {
-                musicSource.mute = true;
+                musicSource.Stop();
+            }
+            
+        }
+        
+        public void UnmuteSiren(string name)
+        {
+            Sound s = Array.Find(sirenSound, x => x.name == name);
+            if (sirenSource.mute)
+            {
+                sirenSource.mute = false;
             }
             else
             {
-                musicSource.mute = false;
+                sirenSource.mute = true;
             }
         }
 

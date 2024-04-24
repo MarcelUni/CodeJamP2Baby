@@ -66,12 +66,12 @@ public class FuelManager : MonoBehaviour
         CurrentFuel -= fuelDepletionAmount;
 
         //Indsæt game over her
-       /*
+       
         if (CurrentFuel <= 0)
         {
-            GameOver();
+            GameManager.instance.GameOver();
         }
-       */
+       
     }
 
     public void AddFuel(int amount)

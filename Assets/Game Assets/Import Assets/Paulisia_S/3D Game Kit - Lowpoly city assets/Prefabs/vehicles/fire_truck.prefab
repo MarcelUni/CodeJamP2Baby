@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2844855960255021843}
   m_Layer: 0
   m_Name: fire_truck
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,6 +133,9 @@ MonoBehaviour:
   explosionForce: 400
   explosionParticlesPrefab: {fileID: 0}
   laneWidth: 2
+  laneChangeSpeed: 50
+  randomLane1: -1
+  randomLane2: 3
   lightLeft: {fileID: 0}
   lightRight: {fileID: 0}
 --- !u!54 &-2844855960255021843
