@@ -79,15 +79,9 @@ public class AudioManageryTest : MonoBehaviour
             
             //Sound s = Array.Find<Sound>(TireScreechSounds, x => x.index == index);
             Sound s = TireScreechSounds[rand];
-            if (s == null)
-            {
-                Debug.LogWarning("Sound: " + rand + " not found!");
-            }
-            else
-            {
-                TireScreechSource.clip = s.clip;
-                TireScreechSource.Play();
-            }
+            
+            TireScreechSource.PlayOneShot(s.clip);
+            TireScreechSource.Play();
             
         }
         /*{
@@ -118,16 +112,26 @@ public class AudioManageryTest : MonoBehaviour
             }
             
         }
-        public void MuteMusic(string name)
+        public void StopMusic(string name)
         {
             Sound s = Array.Find(musicSounds, x => x.name == name);
-            if (musicSource.mute == false)
+            if (musicSource.isPlaying == false)
             {
-                musicSource.mute = true;
+                musicSource.Stop();
+            }
+            
+        }
+        
+        public void UnmuteSiren(string name)
+        {
+            Sound s = Array.Find(sirenSound, x => x.name == name);
+            if (sirenSource.mute)
+            {
+                sirenSource.mute = false;
             }
             else
             {
-                musicSource.mute = false;
+                sirenSource.mute = true;
             }
         }
 
