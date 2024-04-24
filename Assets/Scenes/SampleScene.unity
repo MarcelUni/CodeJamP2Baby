@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.3436276, g: 0.6563921, b: 0.735849, a: 1}
+  m_AmbientSkyColor: {r: 0.34977803, g: 0.6681406, b: 0.7490197, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -945,23 +945,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2648556016498283285, guid: de7d4f5f850d247e788b457e7b2b5ac2,
         type: 3}
+      propertyPath: m_Intensity
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648556016498283285, guid: de7d4f5f850d247e788b457e7b2b5ac2,
+        type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2648556016498283285, guid: de7d4f5f850d247e788b457e7b2b5ac2,
         type: 3}
       propertyPath: m_Shadows.m_Strength
       value: 0.341
       objectReference: {fileID: 0}
+    - target: {fileID: 2648556016498283285, guid: de7d4f5f850d247e788b457e7b2b5ac2,
+        type: 3}
+      propertyPath: m_Shadows.m_Resolution
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789352958798756075, guid: de7d4f5f850d247e788b457e7b2b5ac2,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3789352958798756075, guid: de7d4f5f850d247e788b457e7b2b5ac2,
         type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3789352958798756075, guid: de7d4f5f850d247e788b457e7b2b5ac2,
         type: 3}
       propertyPath: m_Shadows.m_Strength
       value: 0.341
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789352958798756075, guid: de7d4f5f850d247e788b457e7b2b5ac2,
+        type: 3}
+      propertyPath: m_Shadows.m_Resolution
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6180953500769605194, guid: de7d4f5f850d247e788b457e7b2b5ac2,
         type: 3}
