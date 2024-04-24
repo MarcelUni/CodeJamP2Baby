@@ -377,6 +377,142 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &58825453869362961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 648068940985449685, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Street Apartments (Playground)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.223661
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.1998367
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 84.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376274703870777305, guid: 6d26deaf3a4129f4da8477f1a9d36ec6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d26deaf3a4129f4da8477f1a9d36ec6, type: 3}
+--- !u!1001 &8586073011912813534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.223661
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.1998367
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 49.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065710345330570884, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521322239699116125, guid: 328b3b9bcaab30f46bb3de06055221df,
+        type: 3}
+      propertyPath: m_Name
+      value: Street Apartments (No Bus Stop)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 328b3b9bcaab30f46bb3de06055221df, type: 3}
 --- !u!1001 &9143188896817850624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -453,3 +589,5 @@ SceneRoots:
   - {fileID: 577030762}
   - {fileID: 380852274}
   - {fileID: 9143188896817850624}
+  - {fileID: 8586073011912813534}
+  - {fileID: 58825453869362961}
