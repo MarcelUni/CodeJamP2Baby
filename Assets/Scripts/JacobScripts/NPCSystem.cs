@@ -19,6 +19,8 @@ public class NPCSystem : MonoBehaviour
     public int randomLane1 = -1;
     public int randomLane2 = 3;
 
+    public LayerMask npcLayer; // Layer mask for detecting other NPCs
+
     private bool switchingLanes = false;
     private bool blinkLeft;
     private bool blinkRight;
@@ -67,14 +69,14 @@ public class NPCSystem : MonoBehaviour
             float randomTime = Random.Range(0, 350);
 
             // Move left/right with A/D keys
-            if (randomTime == 250 && currentLane != 2)
+            if (randomTime == 250 && currentLane != 2 && !IsNPCInLane(currentLane + 1))
             {
                 switchingLanes = true;
                 blinkLeft = true;
                 blinkRight = false;
                 StartCoroutine(BlinkLeftRight());
             }
-            else if (randomTime == 125 && currentLane != 0)
+            else if (randomTime == 125 && currentLane != 0 && !IsNPCInLane(currentLane - 1))
             {
                 switchingLanes = true;
                 blinkLeft = false;
@@ -82,9 +84,10 @@ public class NPCSystem : MonoBehaviour
                 StartCoroutine(BlinkLeftRight());
             }
         }
+    
 
 
-    }
+}
 
     void ChangeLane(int direction)
     {
@@ -94,11 +97,31 @@ public class NPCSystem : MonoBehaviour
     }
 
 
-    // You can use this method to check if the trigger collider is currently colliding with another trigger collider
-    public bool IsCollidingWithTrigger()
+    private bool IsNPCInLane(int laneIndex)
     {
-        return isCollidingWithTrigger;
+        // Calculate the position where the NPC would be if it changes to the specified lane
+        float targetX = (laneIndex - 1) * laneWidth;
+        Vector3 targetPosition = new Vector3(targetX, transform.position.y, transform.position.z);
+
+        // Calculate the direction of the lane
+        Vector3 laneDirection = targetPosition - transform.position;
+        laneDirection.Normalize();
+
+        // Cast a ray in the direction of the lane to check for collisions
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, laneDirection, out hit, laneWidth, npcLayer))
+        {
+            // Check if the hit object is not the NPC itself
+            if (hit.collider.gameObject != gameObject)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
+
+
 
     private IEnumerator BlinkLeftRight()
     {

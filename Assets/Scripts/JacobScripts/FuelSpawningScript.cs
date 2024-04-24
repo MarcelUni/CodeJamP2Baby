@@ -12,6 +12,7 @@ public class FuelSpawningScript : MonoBehaviour
     public float maxSpawnInterval = 15f; // Maximum time interval between spawns
     private float nextSpawnTime; // Time for the next spawn
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class FuelSpawningScript : MonoBehaviour
             nextSpawnTime = Time.time + Random.Range(minSpawnInterval, maxSpawnInterval);
         }
 
+
         // Despawn fuel objects that are too far behind the player
         DespawnOldFuel();
     }
@@ -46,6 +48,7 @@ public class FuelSpawningScript : MonoBehaviour
         // Instantiate the fuel object at the chosen spawn point with a rotation of 180 degrees
         Instantiate(fuelPrefab, spawnPoint.position, Quaternion.Euler(0f, 180f, 0f));
     }
+
 
     // Method to despawn old fuel objects
     void DespawnOldFuel()
