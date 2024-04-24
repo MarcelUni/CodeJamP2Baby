@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393725025522490204}
   - component: {fileID: 3427611219016669375}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,9 +111,9 @@ GameObject:
   - component: {fileID: 5055895190318315649}
   - component: {fileID: 8177577805682570461}
   - component: {fileID: 8297178718724759395}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small_car
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,8 +209,9 @@ MonoBehaviour:
   speed: 10
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 1523052768564038420}
-  laneWidth: 6
+  laneWidth: 3
   laneChangeSpeed: 50
+  isCollidingWithTrigger: 0
   randomLane1: -1
   randomLane2: 3
   lightLeft: {fileID: 7822006741959873440}
@@ -228,7 +229,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -5153,8 +5154,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6585581, y: 1.2584753, z: 2.4284446}
-  m_Center: {x: 20, y: 0.62923765, z: -0.091692686}
+  m_Size: {x: 20, y: 1.2584753, z: 2.4284446}
+  m_Center: {x: 0, y: 0.62923765, z: -0.091692686}
 --- !u!1 &7822006741959873440
 GameObject:
   m_ObjectHideFlags: 0
@@ -5165,7 +5166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8226009270399310445}
   - component: {fileID: 2881748658853259247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5258,8 +5259,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7636640641255956252}
     m_Modifications:
     - target: {fileID: 1636448248926476, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636448248926476, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756283545428916, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1756283545428916, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5270,8 +5279,16 @@ PrefabInstance:
       value: SmallExplosion
       objectReference: {fileID: 0}
     - target: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834016579923706, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1834016579923706, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
       propertyPath: m_StaticEditorFlags

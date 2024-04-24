@@ -14,7 +14,7 @@ public class NPCSystem : MonoBehaviour
     private int currentLane = 1; // Current lane index (0, 1, 2)
     private int targetLane = 1; // Target lane for lane change
     public float laneChangeSpeed = 50f; // Duration of lane change in seconds
-    private bool isCollidingWithTrigger = false;
+    public bool isCollidingWithTrigger = false;
 
     public int randomLane1 = -1;
     public int randomLane2 = 3;
@@ -93,27 +93,6 @@ public class NPCSystem : MonoBehaviour
         switchingLanes = false;
     }
 
-
-
-    // This method is called when the trigger collider enters another trigger collider
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.isTrigger)
-        {
-            // If the other collider is also a trigger, set the flag to true
-            isCollidingWithTrigger = true;
-        }
-    }
-
-    // This method is called when the trigger collider exits another trigger collider
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.isTrigger)
-        {
-            // If the other collider is a trigger, set the flag to false
-            isCollidingWithTrigger = false;
-        }
-    }
 
     // You can use this method to check if the trigger collider is currently colliding with another trigger collider
     public bool IsCollidingWithTrigger()

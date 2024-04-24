@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 8353352286213051895}
   - component: {fileID: 3451878610396397021}
   - component: {fileID: 6166768393605154526}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bus
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,8 +114,9 @@ MonoBehaviour:
   speed: 10
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 8306116987935155976}
-  laneWidth: 6
+  laneWidth: 3
   laneChangeSpeed: 50
+  isCollidingWithTrigger: 0
   randomLane1: -1
   randomLane2: 3
   lightLeft: {fileID: 8638082366747710458}
@@ -133,7 +134,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -5058,8 +5059,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.5946016, y: 2.5057693, z: 7.1844983}
-  m_Center: {x: 20, y: 1.2528846, z: 0.038560152}
+  m_Size: {x: 20, y: 2.5057693, z: 7.1844983}
+  m_Center: {x: 0, y: 1.2528846, z: 0.038560152}
 --- !u!1 &6951998276960003920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,7 +5071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886848705260294905}
   - component: {fileID: 3897699878957594198}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5164,7 +5165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8052773384040337938}
   - component: {fileID: 5112341163350649812}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5257,8 +5258,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 4337681428128005447}
     m_Modifications:
     - target: {fileID: 1636448248926476, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636448248926476, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756283545428916, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1756283545428916, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5269,8 +5278,16 @@ PrefabInstance:
       value: SmallExplosion
       objectReference: {fileID: 0}
     - target: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834016579923706, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1834016579923706, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
       propertyPath: m_StaticEditorFlags
