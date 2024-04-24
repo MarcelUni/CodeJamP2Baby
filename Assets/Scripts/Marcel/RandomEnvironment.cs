@@ -47,7 +47,7 @@ public class RandomEnvironment : MonoBehaviour
 
         if(transform.position.z - lastZ > instantiateDistance)
         {
-            Vector3 position = new Vector3(0, 0, lastZ + addToZ);
+            Vector3 position = new Vector3(0.6f, 0, lastZ + addToZ);
 
             GameObject prefabtoInstantiate;
 
