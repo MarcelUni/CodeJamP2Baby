@@ -11,11 +11,11 @@ public class RandomEnvironment : MonoBehaviour
     private bool bigCity = false;
     private List<GameObject> RoadChunks = new List<GameObject>();
 
-    [SerializeField] private int instantiateDistance = 1;
+    [SerializeField] private int instantiateDistance = -100;
     [SerializeField] private List<GameObject> smallHouses = new List<GameObject>();
     [SerializeField] private List<GameObject> bigHouses = new List<GameObject>();
     [SerializeField] private float bigHouseThreshold = 250;
-    [SerializeField] private float removeDistance = 50;
+    [SerializeField] private float removeDistance = 25;
     [SerializeField] private GameObject environment;
 
 
