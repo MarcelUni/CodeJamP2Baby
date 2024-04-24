@@ -163,6 +163,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.DefaultCompany.CodeJamP2Baby
     Standalone: com.DefaultCompany.CodeJamP2Baby
+    iPhone: com.DefaultCompany.CodeJamP2Baby
   buildNumber:
     Standalone: 0
     VisionOS: 0
