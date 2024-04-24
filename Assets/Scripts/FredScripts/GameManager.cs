@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public int _playerHP = 3;
     public GameObject hearts;
     public GameObject _player;
+    public GameObject _gameOverScreen;
+    public GameObject fuelBar;
 
     //Using a get set method to control the player's HP but it can't go below 0 or exceed 3
     public int PlayerHP
@@ -72,6 +74,10 @@ public class GameManager : MonoBehaviour
             _player.GetComponent<Controller>().enabled = true;
             Debug.Log("Ambulance Controller Enabled");
         }
+
+        _gameOverScreen.SetActive(false);
+        fuelBar.SetActive(true);
+
     }
 
     private void Update()
@@ -110,8 +116,13 @@ public class GameManager : MonoBehaviour
         _player.GetComponent<Controller>().enabled = false;
         Debug.Log("Ambulance Controller Disabled");
 
+        _gameOverScreen.SetActive(true);
+        fuelBar.SetActive(false);
+
+
         //Uncomment når spil sættes op, og GameOver Screen er klar
         
+        /*
         if (GameObject.Find("GameOver") == null)
         {
             Debug.Log("Game Over Screen not found");
@@ -120,29 +131,23 @@ public class GameManager : MonoBehaviour
         {
             GameObject.Find("GameOver").SetActive(true);
             Debug.Log("Found GameOver Screen :)");
-        }   
+        } 
+        */
     }
 
     public void GameWinCheck()
     {
         
-        if (_player.transform.position.z >= 10)
+        if (_player.transform.position.z >= 1000)
         {
-            Debug.Log("Game Win");
-            if (SceneManager.GetSceneByName("Win Screen").IsValid())
-            {
-                ScenesManager.instance.LoadScene("Win Screen");
-            }
-            else
-            {
-                Debug.Log("Win scene not found");
-            }
+            ScenesManager.instance.LoadScene("Win Cutscene");
+            Debug.Log("Win!!");
         }
 
     }
     public void ResetGame()
     {
-        ScenesManager.instance.LoadScene("Main Game");
+        SceneManager.LoadScene("Main Game");
     }
 
 }
