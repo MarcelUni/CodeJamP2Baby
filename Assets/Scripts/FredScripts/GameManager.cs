@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
                 _playerHP = value;
                 heartDisplay(_playerHP);
 
-
                 if (_playerHP == 1)
                 {
                     //Uncomment n�r AudioManager er korrekt navngivet
@@ -65,6 +64,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        randomEnvironment = FindObjectOfType<RandomEnvironment>();
+
         PlayerHP = 3;
 
         if (_player == null)
@@ -147,13 +148,10 @@ public class GameManager : MonoBehaviour
 
     public void GameWinCheck()
     {
-
         if (_player.transform.position.z >= winDistance)
         {
-
             randomEnvironment.SpawnHospital();
         }
-
     }
     public void ResetGame()
     {

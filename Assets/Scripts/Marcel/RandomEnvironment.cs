@@ -18,7 +18,7 @@ public class RandomEnvironment : MonoBehaviour
     [SerializeField] private float bigHouseThreshold = 250;
     [SerializeField] private float removeDistance = 25;
     [SerializeField] private GameObject environment;
-    [SerializeField] private GameManager gameManager;
+    private GameManager gameManager;
 
     [SerializeField] private GameObject hospitalPrefab;
 
@@ -33,10 +33,10 @@ public class RandomEnvironment : MonoBehaviour
         lastZ = transform.position.z;
 
         addToZ = 23.83068f; // The distance between the chunks
-        
-
         smallHouseLength = smallHouses.Count;
         bigHouseLenght = bigHouses.Count;
+
+        gameManager = GameManager.instance;
     }
 
     void Update()

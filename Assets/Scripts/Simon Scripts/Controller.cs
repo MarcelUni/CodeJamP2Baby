@@ -46,12 +46,10 @@ public class Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             LeftLane();
-            AudioManageryTest.instance.PlayTireScreech("TireScreech4");
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             RightLane();
-            AudioManageryTest.instance.PlayTireScreech("TireScreech2");
         }
 
         // Jump with Space key
@@ -69,6 +67,7 @@ public class Controller : MonoBehaviour
 
         ChangeLane(1);
         anim.SetTrigger("Right");
+        AudioManageryTest.instance.PlayTireScreech("TireScreech4");
     
     }
 
@@ -79,6 +78,7 @@ public class Controller : MonoBehaviour
 
         ChangeLane(-1);
         anim.SetTrigger("Left");
+        AudioManageryTest.instance.PlayTireScreech("TireScreech2");
     }
 
     //JUMPING 

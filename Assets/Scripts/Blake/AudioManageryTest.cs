@@ -33,6 +33,7 @@ public class AudioManageryTest : MonoBehaviour
             if (s == null)
             {
                 Debug.LogWarning("Sound: " + name + " not found!");
+                return;
             }
             else
             {
