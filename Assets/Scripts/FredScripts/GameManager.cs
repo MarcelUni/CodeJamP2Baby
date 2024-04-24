@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
             if (value <= 0)
             {
                 _playerHP = 0;
+                heartDisplay(_playerHP);
                 GameOver();
                 Debug.Log("Game Over");
             }
@@ -37,11 +38,14 @@ public class GameManager : MonoBehaviour
             {
                 _playerHP = value;
                 heartDisplay(_playerHP);
+                
+                /*
                 if (_playerHP == 1)
                 {
                     //Uncomment når AudioManager er korrekt navngivet
-                    //UnMuteSiren();
+                    UnMuteSiren();
                 }
+                */
             }
         }
     }
@@ -106,17 +110,33 @@ public class GameManager : MonoBehaviour
         _player.GetComponent<Controller>().enabled = false;
         Debug.Log("Ambulance Controller Disabled");
 
-        GameObject.Find("GameOver").SetActive(true);
-        Debug.Log("Found GameOver Screen :)");
+        //Uncomment når spil sættes op, og GameOver Screen er klar
+        
+        if (GameObject.Find("GameOver") == null)
+        {
+            Debug.Log("Game Over Screen not found");
+        }
+        else
+        {
+            GameObject.Find("GameOver").SetActive(true);
+            Debug.Log("Found GameOver Screen :)");
+        }   
     }
 
     public void GameWinCheck()
     {
         
-        if (_player.transform.position.z >= 5000)
+        if (_player.transform.position.z >= 10)
         {
             Debug.Log("Game Win");
-            ScenesManager.instance.LoadScene("Win Screen");
+            if (SceneManager.GetSceneByName("Win Screen").IsValid())
+            {
+                ScenesManager.instance.LoadScene("Win Screen");
+            }
+            else
+            {
+                Debug.Log("Win scene not found");
+            }
         }
 
     }

@@ -898,6 +898,12 @@ PrefabInstance:
       addedObject: {fileID: 1269483926}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbd7122d624c5424991432f8abeaa701, type: 3}
+--- !u!1 &764996492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 156013000798299975, guid: dbd7122d624c5424991432f8abeaa701,
+    type: 3}
+  m_PrefabInstance: {fileID: 764996491}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &771417786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,8 +1328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHP: 3
-  HP_Display: {fileID: 0}
   hearts: {fileID: 99395447}
+  _player: {fileID: 764996492}
 --- !u!1 &1247002110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,7 +1724,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2119366515}
         m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -1851,10 +1857,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 1149836837}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResetGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
