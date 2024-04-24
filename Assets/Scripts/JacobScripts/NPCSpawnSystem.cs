@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
 
 public class NPCSpawnSystem : MonoBehaviour
 {

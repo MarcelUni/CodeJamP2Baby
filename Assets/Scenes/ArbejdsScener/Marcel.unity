@@ -774,6 +774,16 @@ PrefabInstance:
       propertyPath: environment
       value: 
       objectReference: {fileID: 940920062}
+    - target: {fileID: 7556039653390275786, guid: aa197611a311b418283eec17aa0ee108,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.762995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556039653390275786, guid: aa197611a311b418283eec17aa0ee108,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.29993
+      objectReference: {fileID: 0}
     - target: {fileID: 8567368662172987249, guid: aa197611a311b418283eec17aa0ee108,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -828,6 +838,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ambulance M Anim
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174171482643548230, guid: aa197611a311b418283eec17aa0ee108,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.499593
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174171482643548230, guid: aa197611a311b418283eec17aa0ee108,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.3392004
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
