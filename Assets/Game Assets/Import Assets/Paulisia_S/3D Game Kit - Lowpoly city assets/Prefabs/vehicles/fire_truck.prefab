@@ -133,7 +133,8 @@ MonoBehaviour:
   explosionForce: 400
   explosionParticlesPrefab: {fileID: 0}
   laneWidth: 2
-  laneChangeSpeed: 50
+  laneChangeSpeed: 20
+  isCollidingWithTrigger: 0
   randomLane1: -1
   randomLane2: 3
   lightLeft: {fileID: 0}

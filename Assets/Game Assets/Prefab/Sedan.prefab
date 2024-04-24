@@ -1016,7 +1016,7 @@ MonoBehaviour:
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 2420590002243070847}
   laneWidth: 3
-  laneChangeSpeed: 50
+  laneChangeSpeed: 20
   isCollidingWithTrigger: 0
   randomLane1: -1
   randomLane2: 3
