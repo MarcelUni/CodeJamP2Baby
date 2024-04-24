@@ -12,6 +12,9 @@ public class CutSceneEnd : MonoBehaviour
 
     private void Start()
     {
+
+        AudioManageryTest.instance.PlayMusic("EndSceneMusic");
+
         StartCoroutine(PlayTimelineRoutine(playableDirector, EndSceneDone));
     }
 
