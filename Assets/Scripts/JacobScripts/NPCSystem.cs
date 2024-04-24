@@ -39,7 +39,7 @@ public class NPCSystem : MonoBehaviour
     }
     void FixedUpdate()
     {
-        // Move the object along its forward direction (in local space)
+        // Move the object along its forward direction (din local space)
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
         if (switchingLanes == false)
         {
