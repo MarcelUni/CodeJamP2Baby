@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4468868883552791182}
   - component: {fileID: 4436874308291767036}
   - component: {fileID: -1064566679281994593}
+  - component: {fileID: 8914168292308513080}
   m_Layer: 0
   m_Name: truck
   m_TagString: Untagged
@@ -115,6 +116,9 @@ MonoBehaviour:
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 1167686294653508206}
   laneWidth: 6
+  laneChangeSpeed: 50
+  randomLane1: -1
+  randomLane2: 3
   lightLeft: {fileID: 1743814700890750505}
   lightRight: {fileID: 6443531955955389869}
 --- !u!65 &-2261868273223154474
@@ -5036,6 +5040,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8914168292308513080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261569558913212766}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2560914, y: 2.5815666, z: 7.097672}
+  m_Center: {x: 20, y: 1.288565, z: -0.18883395}
 --- !u!1 &1743814700890750505
 GameObject:
   m_ObjectHideFlags: 0
