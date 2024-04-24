@@ -68,6 +68,8 @@ public class FuelManager : MonoBehaviour
         if (CurrentFuel <= 0)
         {
             GameManager.instance.GameOver();
+            AudioManageryTest.instance.PlaySFX("Engine Bust");
+            
         }
        
     }
