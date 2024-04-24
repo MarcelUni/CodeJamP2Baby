@@ -122,6 +122,18 @@ public class AudioManageryTest : MonoBehaviour
             
         }
         
+        public void StopAmbience(string name)
+        {
+            Sound s = Array.Find(ambienceSounds, x => x.name == name);
+            if (ambienceSource.isPlaying == false)
+            {
+                ambienceSource.Stop();
+            }
+            
+        }
+        
+        
+        
         public void UnmuteSiren(string name)
         {
             Sound s = Array.Find(sirenSound, x => x.name == name);
