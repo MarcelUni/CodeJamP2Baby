@@ -833,6 +833,16 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6825650133503720037, guid: dbd7122d624c5424991432f8abeaa701,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825650133503720037, guid: dbd7122d624c5424991432f8abeaa701,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7502536773666548903, guid: dbd7122d624c5424991432f8abeaa701,
         type: 3}
       propertyPath: m_UseGravity
@@ -2187,7 +2197,7 @@ GameObject:
   - component: {fileID: 2119366516}
   - component: {fileID: 2119366515}
   m_Layer: 0
-  m_Name: SceneManager
+  m_Name: ScenesManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
