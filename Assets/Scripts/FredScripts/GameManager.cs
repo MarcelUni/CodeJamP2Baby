@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public int _playerHP = 3;
-    public TextMeshProUGUI HP_Display;
     public GameObject hearts;
+    public GameObject _player;
 
     //Using a get set method to control the player's HP but it can't go below 0 or exceed 3
     public int PlayerHP
@@ -21,11 +22,11 @@ public class GameManager : MonoBehaviour
         }
         set
         {
-            if (value < 0)
+            if (value <= 0)
             {
                 _playerHP = 0;
-                Debug.Log("Player HP can't go below 0");
-                //GameOver();
+                GameOver();
+                Debug.Log("Game Over");
             }
             else if (value > 3)
             {
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
                 heartDisplay(_playerHP);
                 if (_playerHP == 1)
                 {
+                    //Uncomment når AudioManager er korrekt navngivet
                     //UnMuteSiren();
                 }
             }
@@ -52,9 +54,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        PlayerHP = 3;
+
+        if (_player == null)
+        {
+            _player = GameObject.Find("Ambulance");
+        }
+
+        if (_player.GetComponent<Controller>().enabled == false)
+        {
+            _player.GetComponent<Controller>().enabled = true;
+            Debug.Log("Ambulance Controller Enabled");
+        }
+    }
+
     private void Update()
     {
-        HP_Display.text = "HP: " + _playerHP;
+        GameWinCheck();
     }
 
     //method for adjusting HP
@@ -84,5 +102,27 @@ public class GameManager : MonoBehaviour
     {
         //Game over screen
         Debug.Log("Game Over");
+
+        _player.GetComponent<Controller>().enabled = false;
+        Debug.Log("Ambulance Controller Disabled");
+
+        GameObject.Find("GameOver").SetActive(true);
+        Debug.Log("Found GameOver Screen :)");
     }
+
+    public void GameWinCheck()
+    {
+        
+        if (_player.transform.position.z >= 5000)
+        {
+            Debug.Log("Game Win");
+            ScenesManager.instance.LoadScene("Win Screen");
+        }
+
+    }
+    public void ResetGame()
+    {
+        ScenesManager.instance.LoadScene("Main Game");
+    }
+
 }
