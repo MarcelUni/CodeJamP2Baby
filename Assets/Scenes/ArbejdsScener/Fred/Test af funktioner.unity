@@ -2332,6 +2332,8 @@ MonoBehaviour:
   _playerHP: 3
   hearts: {fileID: 232735326383470214}
   _player: {fileID: 156012999213008949}
+  _gameOverScreen: {fileID: 0}
+  fuelBar: {fileID: 0}
 --- !u!4 &81230377
 Transform:
   m_ObjectHideFlags: 0
@@ -26849,6 +26851,8 @@ MonoBehaviour:
   _playerHP: 3
   hearts: {fileID: 232735326383470214}
   _player: {fileID: 0}
+  _gameOverScreen: {fileID: 0}
+  fuelBar: {fileID: 0}
 --- !u!1 &1448417262
 GameObject:
   m_ObjectHideFlags: 0

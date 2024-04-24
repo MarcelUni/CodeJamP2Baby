@@ -64,8 +64,6 @@ public class FuelManager : MonoBehaviour
     public void DepleteFuel()
     {
         CurrentFuel -= fuelDepletionAmount;
-
-        //Indsæt game over her
        
         if (CurrentFuel <= 0)
         {
