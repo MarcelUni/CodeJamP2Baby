@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Exempelk : MonoBehaviour
+public class TestMethodsScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 
@@ -15,10 +15,5 @@ public class Exempelk : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void click()
-    {
-        //GameObject.FindAnyObjectByType<SceneManager>().LoadNextScene();
     }
 }

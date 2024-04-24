@@ -5,6 +5,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    //Singleton pattern - help from ChatGPT as well
 
     public static GameManager instance;
     public int _playerHP = 3;
