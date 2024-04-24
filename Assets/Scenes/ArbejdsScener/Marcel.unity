@@ -774,6 +774,11 @@ PrefabInstance:
       propertyPath: environment
       value: 
       objectReference: {fileID: 940920062}
+    - target: {fileID: 7552124375151070956, guid: aa197611a311b418283eec17aa0ee108,
+        type: 3}
+      propertyPath: bigHouseThreshold
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7556039653390275786, guid: aa197611a311b418283eec17aa0ee108,
         type: 3}
       propertyPath: m_Height
