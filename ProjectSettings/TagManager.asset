@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Ambulance
   - NPC
+  - Fuel
   layers:
   - Default
   - TransparentFX
