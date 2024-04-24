@@ -414,6 +414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198656289721292014, guid: 64891a0eb28db934898420d80ca07cb3,
         type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198656289721292014, guid: 64891a0eb28db934898420d80ca07cb3,
+        type: 3}
       propertyPath: UVModule.flipU
       value: 0
       objectReference: {fileID: 0}
@@ -1010,7 +1015,7 @@ MonoBehaviour:
   speed: 10
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 2420590002243070847}
-  laneWidth: 6
+  laneWidth: 3
   laneChangeSpeed: 50
   isCollidingWithTrigger: 0
   randomLane1: -1
