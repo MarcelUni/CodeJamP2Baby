@@ -6,14 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Start Menu.unity
-    guid: bf56e3e755798498b8e7fb4d22b2df22
-  - enabled: 1
-    path: Assets/Scenes/Main Game.unity
-    guid: 81ad1084b9ff06f499d41c7187f55108
-  - enabled: 1
-    path: Assets/Scenes/Win Cutscene.unity
-    guid: d6eb0aed5498fde429d6fd3136cef891
+    path: Assets/Scenes/ArbejdsScener/Marcel.unity
+    guid: aa438603f5145466ea3238ba6198d70b
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86520fdac32cbf147bff5e84a4ca4ea3,
       type: 2}

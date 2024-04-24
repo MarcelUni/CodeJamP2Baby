@@ -115,7 +115,7 @@ MonoBehaviour:
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 8306116987935155976}
   laneWidth: 3
-  laneChangeSpeed: 50
+  laneChangeSpeed: 20
   isCollidingWithTrigger: 0
   randomLane1: -1
   randomLane2: 3
@@ -5038,7 +5038,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!65 &6166768393605154526
 BoxCollider:
