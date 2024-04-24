@@ -754,7 +754,7 @@ Transform:
   m_GameObject: {fileID: 823703181}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 581, y: -64, z: 5.0127716}
+  m_LocalPosition: {x: 561, y: -89, z: 5.0127716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1245,7 +1245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194, y: 0}
+  m_AnchoredPosition: {x: 205.8, y: 0}
   m_SizeDelta: {x: 219.2, y: 214.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693891420
@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AmbuRace
+  m_text: DashMedic
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 05d4f073e2b73a344b40a70373da6fe0, type: 2}
   m_sharedMaterial: {fileID: -7597556553455388846, guid: 05d4f073e2b73a344b40a70373da6fe0,
@@ -1381,7 +1381,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1073.9, y: 214}
+  m_SizeDelta: {x: 1125.76, y: 214}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832053274
 MonoBehaviour:
