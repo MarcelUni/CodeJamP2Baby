@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Controller : MonoBehaviour
 
@@ -13,14 +12,13 @@ public class Controller : MonoBehaviour
     private int targetLane = 1; // Target lane for lane change
     public float laneChangeSpeed = 0.5f; // Duration of lane change in seconds
 
-    
-
-
     private Rigidbody rb;
     private bool canJump = true;
+    private Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -42,42 +40,53 @@ public class Controller : MonoBehaviour
             }
         }
         
-        
-        
-
         // Move left/right with A/D keys
         if (Input.GetKeyDown(KeyCode.A))
         {
-            ChangeLane(-1);
+            LeftLane();
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            ChangeLane(1);
+            RightLane();
         }
 
         // Jump with Space key
-        if (Input.GetKeyDown(KeyCode.Space) && canJump)
-        {
-            Jump();
+        if (canJump)
+        {   
+            if(Input.GetKeyDown(KeyCode.Space) || Input.acceleration.y > 0.5)
+                Jump();
         }
     }
 
+    public void RightLane()
+    {
+        if(currentLane == 2)
+            return;
+
+        ChangeLane(1);
+        anim.SetTrigger("Right");
+    
+    }
+
+    public void LeftLane()
+    {
+        if(currentLane == 0)
+            return;
+
+        ChangeLane(-1);
+        anim.SetTrigger("Left");
+    }
 
     //JUMPING 
     void OnCollisionEnter(Collision other)
     {
         canJump = true; // Enable jumping when player lands
     }
-
-
-
-        void ChangeLane(int direction)
+    void ChangeLane(int direction)
     {
         int newLane = Mathf.Clamp(currentLane + direction, 0, 2);
         targetLane = newLane;
     }
-
-
     void Jump()
     {
         // Apply jump force
