@@ -8,9 +8,15 @@ public class Controller : MonoBehaviour
     public float forwardSpeed = 10f; // Speed of forward movement
     public float jumpForce = 10f; // Force of the jump
     public float laneWidth = 2f; // Width of each lane
+<<<<<<< HEAD
     private int currentLane = 1; // Current lane index (0, 1, 2)
     private int targetLane = 1; // Target lane for lane change
     public float laneChangeSpeed = 4.5f; // Duration of lane change in seconds
+=======
+    public int currentLane = 1; // Current lane index (0, 1, 2)
+    public int targetLane = 1; // Target lane for lane change
+    public float laneChangeSpeed = 0.5f; // Duration of lane change in seconds
+>>>>>>> 09fadfbb0686778111b900810ee9a90907d456ed
 
 
 

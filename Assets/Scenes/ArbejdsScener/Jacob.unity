@@ -26208,6 +26208,7 @@ MonoBehaviour:
   playerTransform: {fileID: 675984505917346447}
   despawnDistance: 50
   spawnInterval: 1
+  spawnedNPCAmount: 0
 --- !u!4 &1407774237
 Transform:
   m_ObjectHideFlags: 0
@@ -40708,11 +40709,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c4a0ef2a297a04e92b7a6c70aafa16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 35
+  forwardSpeed: 0
   jumpForce: 10
-  sideSpeed: 2
   laneWidth: 6
-  laneChangeDuration: 0.5
+  currentLane: 1
+  targetLane: 1
+  laneChangeSpeed: 50
 --- !u!1 &148735567687550307
 GameObject:
   m_ObjectHideFlags: 0

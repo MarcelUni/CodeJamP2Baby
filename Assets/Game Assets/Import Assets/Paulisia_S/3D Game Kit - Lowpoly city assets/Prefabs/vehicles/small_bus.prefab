@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 3837201526196558654}
   - component: {fileID: 5419222479483937442}
   - component: {fileID: 7537043152324074771}
+  - component: {fileID: -1811466358700676342}
   m_Layer: 0
   m_Name: small_bus
   m_TagString: Untagged
@@ -209,6 +210,9 @@ MonoBehaviour:
   explosionForce: 500
   explosionParticlesPrefab: {fileID: 2197025647022873489}
   laneWidth: 6
+  laneChangeSpeed: 50
+  randomLane1: -1
+  randomLane2: 3
   lightLeft: {fileID: 1017083921021256648}
   lightRight: {fileID: 3915566566060134228}
 --- !u!65 &-251933316990279281
@@ -5130,6 +5134,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-1811466358700676342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658375631960562563}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0857294, y: 1.9514211, z: 3.4682403}
+  m_Center: {x: 20, y: 0.9757106, z: -0.09745628}
 --- !u!1 &3915566566060134228
 GameObject:
   m_ObjectHideFlags: 0
