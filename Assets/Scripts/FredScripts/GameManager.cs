@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
             {
                 _playerHP = 0;
                 Debug.Log("Player HP can't go below 0");
+                //GameOver();
             }
             else if (value > 3)
             {
@@ -35,6 +36,10 @@ public class GameManager : MonoBehaviour
             {
                 _playerHP = value;
                 heartDisplay(_playerHP);
+                if (_playerHP == 1)
+                {
+                    //UnMuteSiren();
+                }
             }
         }
     }
@@ -52,10 +57,10 @@ public class GameManager : MonoBehaviour
         HP_Display.text = "HP: " + _playerHP;
     }
 
-    //method for adding HP
-    public void AddHP() 
+    //method for adjusting HP
+    public void RemoveHP(int num)
     {
-        PlayerHP++;
+        PlayerHP -= num;
     }
 
     //method for removing HP
@@ -73,5 +78,11 @@ public class GameManager : MonoBehaviour
             // Activate the heart if its index is less than the player's HP
             hearts.transform.GetChild(i).gameObject.SetActive(i < _playerHP);
         }
+    }
+
+    public void GameOver()
+    {
+        //Game over screen
+        Debug.Log("Game Over");
     }
 }
