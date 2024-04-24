@@ -27,6 +27,9 @@ public class CutSceneEnd : MonoBehaviour
 
     private void EndSceneDone()
     {
+        AudioManageryTest.instance.StopMusic("EndSceneMusic"); 
+        AudioManageryTest.instance.PlayMusic("MenuMusic");
+
         ScenesManager.instance.LoadScene("Start Menu");
     }
 }
