@@ -5,15 +5,15 @@ using UnityEngine.AdaptivePerformance.VisualScripting;
 
 public class GasTank : MonoBehaviour
 {
-    public float fuelAmount = 10f; // Mængden af benzin bilen får den rammer en benzin dunk.
+    public float fuelAmount = 10f; // Mï¿½ngden af benzin bilen fï¿½r den rammer en benzin dunk.
 
 
     public float laneWidth = 2f; // Width of each lane
     private int currentLane = 1; // Current lane index (0, 1, 2)
     public bool isCollidingWithTrigger = false;
 
-    public int randomLane1 = -1;
-    public int randomLane2 = 3;
+    public int randomLane1 = 0;
+    public int randomLane2 = 2;
 
     // Update is called once per frame
     private void Start()
