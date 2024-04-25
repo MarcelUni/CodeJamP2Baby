@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
