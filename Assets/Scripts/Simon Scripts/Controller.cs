@@ -103,7 +103,16 @@ public class Controller : MonoBehaviour
         // Check if the trigger collider overlaps with an NPC collider
         if (other.CompareTag("Hospital"))
         {
-            ScenesManager.instance.LoadScene("Win Cutscene");
+            if (forwardSpeed <= 35)
+            {
+                ScenesManager.instance.LoadScene("Win Cutscene");
+            }
+            if (forwardSpeed == 34)
+            {
+                ScenesManager.instance.LoadScene("Win CutsceneNight");
+
+            }
+           
         }
     }
 }

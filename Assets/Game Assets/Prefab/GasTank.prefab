@@ -98,9 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6124def3186a779429f484f499fe1511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuelAmount: 10
+  fuelAmount: 20
   laneWidth: 3
   isCollidingWithTrigger: 0
+  laneChangeSpeed: 50
   randomLane1: -1
   randomLane2: 3
 --- !u!65 &5053338887240033620
