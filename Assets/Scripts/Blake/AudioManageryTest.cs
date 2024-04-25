@@ -159,6 +159,7 @@ public class AudioManageryTest : MonoBehaviour
             }
         }
 
+        /*
         public void ToggleMusic(string name)
         {
             musicSource.mute = !musicSource.mute;
@@ -167,4 +168,5 @@ public class AudioManageryTest : MonoBehaviour
         {
             sfxSource.mute = !sfxSource.mute;
         }
+        */
 }
