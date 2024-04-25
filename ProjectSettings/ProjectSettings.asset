@@ -164,7 +164,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.SexyBoyz.DashMedic
     Standalone: com.DefaultCompany.CodeJamP2Baby
-    iPhone: com.DefaultCompany.CodeJamP2Baby
+    iPhone: com.SexyBoyz.DashMedic
   buildNumber:
     Standalone: 0
     VisionOS: 0

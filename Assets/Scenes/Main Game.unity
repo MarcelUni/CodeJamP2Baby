@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06681659, g: 0.21605234, b: 0.29037124, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2887,7 +2887,7 @@ MonoBehaviour:
   _player: {fileID: 1978100554}
   _gameOverScreen: {fileID: 1418646644}
   fuelBar: {fileID: 1236126940}
-  winDistance: 2200
+  winDistance: 3000
   randomEnvironment: {fileID: 7552124374772192048}
 --- !u!1 &1520546261
 GameObject:
