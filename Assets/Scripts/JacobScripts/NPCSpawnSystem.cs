@@ -4,7 +4,7 @@ using UnityEngine;
 public class NPCSpawnSystem : MonoBehaviour
 {
     public GameObject[] npcPrefabs; // Array of NPC prefabs to spawn
-    private NPCSystem npcSystem;
+    //private NPCSystem npcSystem;
     public Transform[] spawnPoints; // Array of spawn points
 
     public Transform playerTransform; // Reference to the player's transform
@@ -18,7 +18,7 @@ public class NPCSpawnSystem : MonoBehaviour
 
     void Start()
     {
-        npcSystem = GameObject.FindAnyObjectByType<NPCSystem>();
+        //npcSystem = GameObject.FindAnyObjectByType<NPCSystem>();
         nextSpawnTime = Time.time + spawnInterval; // Set initial spawn time
     }
 
@@ -45,12 +45,12 @@ public class NPCSpawnSystem : MonoBehaviour
     private IEnumerator SpawnNpcDoubleLane()
     {
 
-        npcSystem.randomLane1 = 3;
-        npcSystem.randomLane2 = 3;
+        //npcSystem.randomLane1 = 3;
+        //npcSystem.randomLane2 = 3;
         SpawnNPC(); // Spawn a new NPC
         yield return new WaitForSeconds(0.1f);
-        npcSystem.randomLane1 = 2;
-        npcSystem.randomLane2 = 2;
+        //npcSystem.randomLane1 = 2;
+        //npcSystem.randomLane2 = 2;
         SpawnNPC(); // Spawn a new NPC
         spawnedNPCAmount = 0;
         yield return new WaitForSeconds(0.1f);
