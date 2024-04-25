@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     //Singleton pattern - help from ChatGPT as well
 
     public static GameManager instance;
-    public int _playerHP = 3;
+    private int _playerHP = 3;
     public GameObject hearts;
     public GameObject _player;
     public GameObject _gameOverScreen;

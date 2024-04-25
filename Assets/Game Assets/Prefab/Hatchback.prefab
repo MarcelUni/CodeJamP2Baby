@@ -44,10 +44,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.61209416, b: 0, a: 1}
-  m_Intensity: 2
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 14.6
+  m_Range: 9.1
+  m_SpotAngle: 12
+  m_InnerSpotAngle: 12
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -138,10 +138,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.61209416, b: 0, a: 1}
-  m_Intensity: 2
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 14.6
+  m_Range: 9.1
+  m_SpotAngle: 12
+  m_InnerSpotAngle: 12
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -199,17 +199,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f0ab94093e61cfc4abc0d3579186438a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.6529063
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0ab94093e61cfc4abc0d3579186438a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.5301723
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0ab94093e61cfc4abc0d3579186438a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -220.1
+      value: -1.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0ab94093e61cfc4abc0d3579186438a,
         type: 3}

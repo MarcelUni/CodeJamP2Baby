@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6694288662022470495}
   - component: {fileID: 7240067563898941989}
   - component: {fileID: 7758462289509698225}
-  - component: {fileID: 772196715214268603}
-  - component: {fileID: 887172676398626083}
   - component: {fileID: 1529998331331908365}
-  m_Layer: 7
+  - component: {fileID: 5053338887240033620}
+  - component: {fileID: -9013109697906347150}
+  m_Layer: 0
   m_Name: GasTank
-  m_TagString: Fuel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,46 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &772196715214268603
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7916870572605709947}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2432570179154699791, guid: f97a870e164214142a3dbf1f6583a510, type: 3}
---- !u!114 &887172676398626083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7916870572605709947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6124def3186a779429f484f499fe1511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fuelAmount: 10
-  laneWidth: 2
-  laneChangeSpeed: 50
-  isCollidingWithTrigger: 0
-  randomLane1: -1
-  randomLane2: 3
 --- !u!114 &1529998331331908365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +100,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelAmount: 10
   laneWidth: 3
-  laneChangeSpeed: 50
   isCollidingWithTrigger: 0
   randomLane1: -1
   randomLane2: 3
+--- !u!65 &5053338887240033620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7916870572605709947}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.33, y: 0.68287617, z: 1.19}
+  m_Center: {x: 0, y: 0.34143808, z: 0.00019009411}
+--- !u!114 &-9013109697906347150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7916870572605709947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac930b07fbe8a6b4fb7ec3c3106039c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
