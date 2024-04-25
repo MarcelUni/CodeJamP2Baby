@@ -135,8 +135,12 @@ MonoBehaviour:
   explosionParticlesPrefab: {fileID: 0}
   laneWidth: 2
   laneChangeSpeed: 50
+  isCollidingWithTrigger: 0
   randomLane1: -1
   randomLane2: 3
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 0
   lightLeft: {fileID: 0}
   lightRight: {fileID: 0}
 --- !u!54 &-838081034516247852
