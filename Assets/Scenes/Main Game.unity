@@ -3571,7 +3571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 35
-  jumpForce: 150
+  jumpForce: 200
   laneWidth: 2.5
   laneChangeSpeed: 30
 --- !u!4 &1978100556
@@ -3620,9 +3620,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978100554}
   serializedVersion: 4
-  m_Mass: 20
-  m_Drag: 1
-  m_AngularDrag: 0.05
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
