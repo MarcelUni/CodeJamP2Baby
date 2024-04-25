@@ -16,7 +16,8 @@ public class FuelManager : MonoBehaviour
 
     public FuelManager fuelBar;
     public Slider slider;
-
+    private bool callOnce; 
+    
     //a get set for the current fuel
     public float CurrentFuel
     {
@@ -55,21 +56,20 @@ public class FuelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        callOnce = true;
         CurrentFuel = maxFuel;
         InvokeRepeating("DepleteFuel", 1.0f, fuelDepletionRate);
     }
-
-
 
     public void DepleteFuel()
     {
         CurrentFuel -= fuelDepletionAmount;
        
-        if (CurrentFuel <= 0)
+        if (CurrentFuel <= 0 && callOnce)
         {
             GameManager.instance.GameOver();
             AudioManageryTest.instance.PlaySFX("Engine Bust");
-            
+            callOnce = false;
         }
        
     }
