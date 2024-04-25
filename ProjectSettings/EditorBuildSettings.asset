@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InfiniteRunnerScene.unity
     guid: c674d450ad168154aaf3f8ae8adccff8
+  - enabled: 1
+    path: Assets/Scenes/Win CutsceneNight.unity
+    guid: 28a89be7f80b55e4fbff01c9eee20269
+  - enabled: 1
+    path: Assets/Scenes/NightDriveChallenge.unity
+    guid: a9756c6e3b46c8b41a74e4f148d41a96
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86520fdac32cbf147bff5e84a4ca4ea3,
       type: 2}

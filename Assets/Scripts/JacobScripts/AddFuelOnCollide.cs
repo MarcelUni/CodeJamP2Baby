@@ -8,7 +8,7 @@ public class AddFuelOnCollide : MonoBehaviour
     {
         if (collision.gameObject.name == "Ambulance")
         {
-            FuelManager.instance.AddFuel(10);
+            FuelManager.instance.AddFuel(35);
             Destroy(gameObject);
         }
     }
