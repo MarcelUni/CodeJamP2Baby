@@ -2831,7 +2831,7 @@ MonoBehaviour:
   _player: {fileID: 1978100554}
   _gameOverScreen: {fileID: 1418646644}
   fuelBar: {fileID: 1236126940}
-  winDistance: 2000
+  winDistance: 2200
   randomEnvironment: {fileID: 7552124374772192048}
 --- !u!1 &1520546261
 GameObject:
