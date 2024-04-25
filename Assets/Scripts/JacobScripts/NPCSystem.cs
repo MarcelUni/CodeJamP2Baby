@@ -153,6 +153,7 @@ public class NPCSystem : MonoBehaviour
         // Check if the collider that was hit has a tag "Ambulance"
         if (collision.collider.CompareTag("Ambulance"))
         {
+            AudioManageryTest.instance.PlaySFX("CrashHP");
             // Calculate a random direction for the explosion in the upper half sphere
             Vector3 explosionDirection = Random.onUnitSphere;
             explosionDirection.y = Mathf.Abs(explosionDirection.y); // Ensure the direction is in the upper half
