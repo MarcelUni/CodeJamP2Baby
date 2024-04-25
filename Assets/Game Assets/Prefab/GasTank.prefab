@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7758462289509698225}
   - component: {fileID: 1529998331331908365}
   - component: {fileID: 5053338887240033620}
-  m_Layer: 7
+  - component: {fileID: -9013109697906347150}
+  m_Layer: 0
   m_Name: GasTank
-  m_TagString: Fuel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelAmount: 10
   laneWidth: 3
-  laneChangeSpeed: 50
   isCollidingWithTrigger: 0
   randomLane1: -1
   randomLane2: 3
@@ -124,3 +124,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.33, y: 0.68287617, z: 1.19}
   m_Center: {x: 0, y: 0.34143808, z: 0.00019009411}
+--- !u!114 &-9013109697906347150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7916870572605709947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac930b07fbe8a6b4fb7ec3c3106039c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

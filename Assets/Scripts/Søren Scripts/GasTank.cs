@@ -10,7 +10,6 @@ public class GasTank : MonoBehaviour
 
     public float laneWidth = 2f; // Width of each lane
     private int currentLane = 1; // Current lane index (0, 1, 2)
-    public float laneChangeSpeed = 50f; // Duration of lane change in seconds
     public bool isCollidingWithTrigger = false;
 
     public int randomLane1 = -1;

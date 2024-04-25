@@ -5186,7 +5186,7 @@ GameObject:
   - component: {fileID: 4666838627979896589}
   - component: {fileID: 1455680184}
   m_Layer: 0
-  m_Name: Ambulance M Anim (1)
+  m_Name: Ambulance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
