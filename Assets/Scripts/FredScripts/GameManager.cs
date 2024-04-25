@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         }
         set
         {
-            if (value <= 0)
+            if (value == 0)
             {
                 _playerHP = 0;
                 heartDisplay(_playerHP);
@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Game Over");
                 AudioManageryTest.instance.PlayLoseSound("CrashDead");
                 AudioManageryTest.instance.StopMusic("GameMusic");
+                //GameObject.Find("Ambulance").GetComponent<AudioListener>().enabled = false;
             }
             else if (value > 3)
             {
@@ -132,7 +133,7 @@ public class GameManager : MonoBehaviour
 
         if (_playerHP == 0)
         {
-            AudioManageryTest.instance.PlayLoseSound("CrashDead");
+            //AudioManageryTest.instance.PlayLoseSound("CrashDead");
             AudioManageryTest.instance.StopSiren("Siren");
         }
         

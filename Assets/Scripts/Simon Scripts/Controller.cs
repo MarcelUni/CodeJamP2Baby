@@ -55,7 +55,7 @@ public class Controller : MonoBehaviour
         // Jump with Space key
         if (canJump)
         {   
-            if(Input.GetKeyDown(KeyCode.Space) || Input.acceleration.y > 0.4)
+            if(Input.GetKeyDown(KeyCode.Space) || Input.acceleration.y > 0.4 || Input.acceleration.z > 0.4)
             {
                 canJump = false; 
                 canCheck = false;
