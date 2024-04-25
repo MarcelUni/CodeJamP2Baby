@@ -48,6 +48,10 @@ public class NPCSpawnSystem : MonoBehaviour
         npcSystem.randomLane1 = 3;
         npcSystem.randomLane2 = 3;
         SpawnNPC(); // Spawn a new NPC
+        yield return new WaitForSeconds(0.1f);
+        npcSystem.randomLane1 = 2;
+        npcSystem.randomLane2 = 2;
+        SpawnNPC(); // Spawn a new NPC
         spawnedNPCAmount = 0;
         yield return new WaitForSeconds(0.1f);
 
