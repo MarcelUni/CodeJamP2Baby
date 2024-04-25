@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.06681659, g: 0.21589318, b: 0.28846633, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1280,7 +1280,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733916321}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &733916325
 Camera:
   m_ObjectHideFlags: 0
@@ -3692,6 +3692,7 @@ GameObject:
   - component: {fileID: 1978100555}
   - component: {fileID: 1978100557}
   - component: {fileID: 1978100558}
+  - component: {fileID: 1978100559}
   m_Layer: 0
   m_Name: Ambulance
   m_TagString: Untagged
@@ -3781,6 +3782,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 1
+--- !u!81 &1978100559
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978100554}
+  m_Enabled: 1
 --- !u!1 &2015751260
 GameObject:
   m_ObjectHideFlags: 0
