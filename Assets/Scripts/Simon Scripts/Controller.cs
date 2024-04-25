@@ -17,8 +17,6 @@ public class Controller : MonoBehaviour
     private Animator anim;
     private bool canCheck;
 
-
-
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
@@ -79,9 +77,12 @@ public class Controller : MonoBehaviour
             return;
 
         ChangeLane(1);
+        
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Right"))
+            return;
+
         anim.SetTrigger("Right");
         AudioManageryTest.instance.PlayTireScreech("TireScreech4");
-    
     }
 
     public void LeftLane()
@@ -90,6 +91,10 @@ public class Controller : MonoBehaviour
             return;
 
         ChangeLane(-1);
+
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Left"))
+            return;
+
         anim.SetTrigger("Left");
         AudioManageryTest.instance.PlayTireScreech("TireScreech2");
     }
@@ -107,7 +112,6 @@ public class Controller : MonoBehaviour
     }
     void Jump()
     {
-        
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 
@@ -124,8 +128,7 @@ public class Controller : MonoBehaviour
             {
                 ScenesManager.instance.LoadScene("Win CutsceneNight");
 
-            }
-           
+            }  
         }
     }
 }
