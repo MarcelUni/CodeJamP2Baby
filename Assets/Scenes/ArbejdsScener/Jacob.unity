@@ -2529,12 +2529,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0223f1ec90a7048bb51cc14790c0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerHP: 3
   hearts: {fileID: 1948428828}
   _player: {fileID: 9056379054986192919}
   _gameOverScreen: {fileID: 1418646644}
   fuelBar: {fileID: 1236126940}
-  winDistance: 100
+  winDistance: 5000
   randomEnvironment: {fileID: 7552124374772192048}
 --- !u!65 &1455680184
 BoxCollider:
@@ -3099,7 +3098,7 @@ Transform:
   m_GameObject: {fileID: 1720050573}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: -2, z: 377.61}
+  m_LocalPosition: {x: 0, y: -3.6, z: 377.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4711,7 +4710,6 @@ MonoBehaviour:
   bigHouseThreshold: 20
   removeDistance: 50
   environment: {fileID: 2015751260}
-  gameManager: {fileID: 1445734660}
   hospitalPrefab: {fileID: 363025940278517486, guid: eb1a3f979ef5c8743a26ef5a30ec6511,
     type: 3}
 --- !u!136 &7556039652981377302

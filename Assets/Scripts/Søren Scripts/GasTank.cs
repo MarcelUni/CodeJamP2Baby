@@ -11,11 +11,12 @@ public class GasTank : MonoBehaviour
     public float laneWidth = 2f; // Width of each lane
     private int currentLane = 1; // Current lane index (0, 1, 2)
     public bool isCollidingWithTrigger = false;
+    private int targetLane = 1; // Target lane for lane change
+    public float laneChangeSpeed = 50f; // Duration of lane change in seconds
 
     public int randomLane1 = 0;
     public int randomLane2 = 2;
 
-    // Update is called once per frame
     private void Start()
     {
         // Randomly choose a lane index between -1 and 3
@@ -26,9 +27,29 @@ public class GasTank : MonoBehaviour
 
     }
 
-    void ChangeLane(int direction)
+    void FixedUpdate()
+    {
+        // Move the object along its forward direction (din local space)
+        transform.Translate(Vector3.forward * 0f * Time.deltaTime);
+
+        if (currentLane != targetLane)
+        {
+            float targetX = (targetLane - 1) * laneWidth;
+            float newX = Mathf.MoveTowards(transform.position.x, targetX, laneChangeSpeed * Time.deltaTime);
+            transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+
+            // If the player reached the target lane, update the current lane
+            if (Mathf.Approximately(transform.position.x, targetX))
+            {
+                currentLane = targetLane;
+            }
+        }
+    }
+
+        void ChangeLane(int direction)
     {
         int newLane = Mathf.Clamp(currentLane + direction, 0, 2);
+        targetLane = newLane;
     }
 
     private void OnTriggerEnter(Collider other)
