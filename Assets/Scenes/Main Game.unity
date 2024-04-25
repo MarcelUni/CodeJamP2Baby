@@ -3715,6 +3715,7 @@ MonoBehaviour:
   jumpForce: 200
   laneWidth: 3
   laneChangeSpeed: 30
+  canJump: 0
 --- !u!4 &1978100556
 Transform:
   m_ObjectHideFlags: 0
@@ -3777,7 +3778,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 2
+  m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 1
 --- !u!1 &2015751260
