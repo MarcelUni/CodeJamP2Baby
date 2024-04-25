@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06681659, g: 0.21605234, b: 0.29037124, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2692,7 +2692,7 @@ MonoBehaviour:
   _player: {fileID: 1978100554}
   _gameOverScreen: {fileID: 1418646644}
   fuelBar: {fileID: 1236126940}
-  winDistance: 500
+  winDistance: 2000
   randomEnvironment: {fileID: 7552124374772192048}
 --- !u!1 &1520546261
 GameObject:
@@ -3574,7 +3574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 35
   jumpForce: 200
-  laneWidth: 2.5
+  laneWidth: 3
   laneChangeSpeed: 30
 --- !u!4 &1978100556
 Transform:
@@ -4793,7 +4793,7 @@ MonoBehaviour:
   - {fileID: 8881208179909328235, guid: 78ba7462468f54fe7b5d83ddd8adaf21, type: 3}
   - {fileID: 2975856955066594672, guid: 226eb72a56c874bf3af3dda7f24de8df, type: 3}
   - {fileID: 9011387521615182030, guid: 51283ffb3f5e2451e9b8e33cc19acd19, type: 3}
-  bigHouseThreshold: 20
+  bigHouseThreshold: 1000
   removeDistance: 50
   environment: {fileID: 2015751260}
   hospitalPrefab: {fileID: 5882809594700683614, guid: 95cb491ffc6aad84894f2e0fac7ac759,
