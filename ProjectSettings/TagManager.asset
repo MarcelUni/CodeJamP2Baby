@@ -10,6 +10,7 @@ TagManager:
   - NPC
   - Fuel
   - Hospital
+  - Ground
   layers:
   - Default
   - TransparentFX

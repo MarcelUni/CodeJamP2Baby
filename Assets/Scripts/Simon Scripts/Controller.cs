@@ -13,8 +13,9 @@ public class Controller : MonoBehaviour
     public float laneChangeSpeed = 0.5f; // Duration of lane change in seconds
 
     private Rigidbody rb;
-    private bool canJump = true;
+    public bool canJump;
     private Animator anim;
+    private bool canCheck;
 
 
 
@@ -22,6 +23,7 @@ public class Controller : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
+        canJump = true;
     }
 
     void Update()
@@ -55,9 +57,20 @@ public class Controller : MonoBehaviour
         // Jump with Space key
         if (canJump)
         {   
-            if(Input.GetKeyDown(KeyCode.Space) || Input.acceleration.y > 0.5)
+            if(Input.GetKeyDown(KeyCode.Space) || Input.acceleration.y > 0.4)
+            {
+                canJump = false; 
+                canCheck = false;
                 Jump();
-        }
+                StartCoroutine(WaitCheck());
+            }
+        }    
+    }
+
+    IEnumerator WaitCheck()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canCheck = true;
     }
 
     public void RightLane()
@@ -84,7 +97,8 @@ public class Controller : MonoBehaviour
     //JUMPING 
     void OnCollisionEnter(Collision other)
     {
-        canJump = true; // Enable jumping when player lands
+        if(other.gameObject.CompareTag("Ground") && canCheck == true)
+            canJump = true;
     }
     void ChangeLane(int direction)
     {
@@ -93,9 +107,8 @@ public class Controller : MonoBehaviour
     }
     void Jump()
     {
-        // Apply jump force
+        
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        canJump = false; // Disable jumping until player lands again
     }
 
     private void OnTriggerEnter(Collider other)
