@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ScenesManager">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\FredScripts\ScenesManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgoCAAICAAAAEAAAAACAAAAQRAAAAAAAAAIQBAgEA=</HashCode>
+      <FileName>Assets\Scripts\FredScripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FuelManager">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAAAAAAABCEAAGAAABAAAAAAAAEAAAAgEE=</HashCode>
+      <FileName>Assets\Scripts\FredScripts\FuelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManageryTest">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAKAAEEQAACgAAAAAAJVASABAACAIAAAAQAAIAEA=</HashCode>
+      <FileName>Assets\Scripts\Blake\AudioManageryTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManager">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAgAAAAAQBEASABAAAAIAAAAQAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Blake\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NPCSystem">
+    <Position X="17.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EGAAgEAIQiABYAAAAAAAAAABAAAAAYAMQAIAkAEACAA=</HashCode>
+      <FileName>Assets\Scripts\JacobScripts\NPCSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NPCSpawnSystem">
+    <Position X="19.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQBAAAAADAEAAAAAAAAAAABAAACAAIAAAIQAAAAFAA=</HashCode>
+      <FileName>Assets\Scripts\JacobScripts\NPCSpawnSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Camera">
+    <Position X="22" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAIABAAAAAAAAAAAAAAACAAEA=</HashCode>
+      <FileName>Assets\Scripts\Simon Scripts\Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Controller">
+    <Position X="24" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAEIAiAAAAAEAAAAAAABAgBAAUAMQQAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Simon Scripts\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RandomEnvironment">
+    <Position X="13.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAARAAACEAAoAEAAAIBAAAAEAAQEAAAAAAIAgEgAA=</HashCode>
+      <FileName>Assets\Scripts\Marcel\RandomEnvironment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RemoveEnvironment">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQACACAAAAAEEAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Marcel\RemoveEnvironment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
