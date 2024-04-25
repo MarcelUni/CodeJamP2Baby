@@ -176,7 +176,7 @@ public class NPCSystem : MonoBehaviour
             }
 
             // You can add any other actions or behaviors here
-            Debug.Log("Object hit an Ambulance and exploded!");
+            //Debug.Log("Object hit an Ambulance and exploded!");
         }
     }
 }

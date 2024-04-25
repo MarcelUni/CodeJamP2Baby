@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -103,7 +103,16 @@ public class Controller : MonoBehaviour
         // Check if the trigger collider overlaps with an NPC collider
         if (other.CompareTag("Hospital"))
         {
-            ScenesManager.instance.LoadScene("Win Cutscene");
+            if (forwardSpeed != 65)
+            {
+                ScenesManager.instance.LoadScene("Win Cutscene");
+            }
+            if (forwardSpeed == 65)
+            {
+                ScenesManager.instance.LoadScene("Win CutsceneNight");
+
+            }
+           
         }
     }
 }
