@@ -168,8 +168,10 @@ public class GameManager : MonoBehaviour
     }
     public void ResetGame()
     {
+        AudioManageryTest.instance.UnmuteSiren("siren");
         SceneManager.LoadScene("Main Game");
         Debug.Log("lort");
+        
     }
 
     public void QuitGame()
