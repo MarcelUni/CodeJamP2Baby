@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6124def3186a779429f484f499fe1511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuelAmount: 20
+  fuelAmount: 100
   laneWidth: 3
   isCollidingWithTrigger: 0
   laneChangeSpeed: 50
