@@ -2724,7 +2724,7 @@ MonoBehaviour:
   _gameOverScreen: {fileID: 1418646644}
   fuelBar: {fileID: 1236126940}
   winDistance: 500
-  randomEnvironment: {fileID: 0}
+  randomEnvironment: {fileID: 7552124374772192048}
 --- !u!65 &1455680184
 BoxCollider:
   m_ObjectHideFlags: 0
