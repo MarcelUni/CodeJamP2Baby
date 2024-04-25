@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
                 heartDisplay(_playerHP);
                 GameOver();
                 Debug.Log("Game Over");
-                AudioManageryTest.instance.PlaySFX("CrashDead");
+                AudioManageryTest.instance.PlayLoseSound("CrashDead");
                 AudioManageryTest.instance.StopMusic("GameMusic");
             }
             else if (value > 3)
@@ -119,6 +119,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        
         //Game over screen
         Debug.Log("Game Over");
 
@@ -127,9 +128,17 @@ public class GameManager : MonoBehaviour
 
         _gameOverScreen.SetActive(true);
         fuelBar.SetActive(false);
+        //FuelManager.instance.fuelDepletionRate = 0f;
 
-        AudioManageryTest.instance.UnmuteSiren("Siren");
+        if (_playerHP == 0)
+        {
+            AudioManageryTest.instance.PlayLoseSound("CrashDead");
+            AudioManageryTest.instance.StopSiren("Siren");
+        }
+        
         AudioManageryTest.instance.StopMusic("GameMusic");
+        AudioManageryTest.instance.MuteSFX();
+        
 
 
 
@@ -144,7 +153,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject.Find("GameOver").SetActive(true);
             Debug.Log("Found GameOver Screen :)");
-        } 
+        }
         */
     }
 

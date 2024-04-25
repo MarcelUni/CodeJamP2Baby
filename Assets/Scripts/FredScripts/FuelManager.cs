@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -58,19 +59,37 @@ public class FuelManager : MonoBehaviour
     {
         callOnce = true;
         CurrentFuel = maxFuel;
-        InvokeRepeating("DepleteFuel", 1.0f, fuelDepletionRate);
+        InvokeRepeating("DepleteFuel", 1f, fuelDepletionRate);
+    }
+
+    private void FixedUpdate()
+    {
+        if (CurrentFuel <= 0 && callOnce)
+        {
+            GameManager.instance.GameOver();
+            AudioManageryTest.instance.PlayLoseSound("Engine Bust");
+            CancelInvoke("DepleteFuel");
+            callOnce = false;
+            
+        }
+        
     }
 
     public void DepleteFuel()
     {
         CurrentFuel -= fuelDepletionAmount;
        
+        /*
         if (CurrentFuel <= 0 && callOnce)
         {
+            
             GameManager.instance.GameOver();
-            AudioManageryTest.instance.PlaySFX("Engine Bust");
+            AudioManageryTest.instance.PlayLoseSound("Engine Bust");
             callOnce = false;
+            CancelInvoke("DepleteFuel");
         }
+        */
+        
        
     }
 

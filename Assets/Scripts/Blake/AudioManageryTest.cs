@@ -7,8 +7,8 @@ using Random = UnityEngine.Random;
 
 public class AudioManageryTest : MonoBehaviour
 {
-    public Sound[] musicSounds, sirenSound, ambienceSounds, TireScreechSounds, sfxSounds;
-    public AudioSource musicSource, sirenSource, ambienceSource, TireScreechSource, sfxSource;
+    public Sound[] musicSounds, sirenSound, ambienceSounds, TireScreechSounds, sfxSounds, loseSounds;
+    public AudioSource musicSource, sirenSource, ambienceSource, TireScreechSource, sfxSource, loseSource;
     
         public static AudioManageryTest instance;
 
@@ -57,6 +57,21 @@ public class AudioManageryTest : MonoBehaviour
             }
             
         }
+        public void PlayLoseSound(string name)
+        {
+            Sound s = Array.Find(loseSounds, x => x.name == name);
+            if (s == null)
+            {
+                Debug.LogWarning("Sound: " + name + " not found!");
+            }
+            else
+            {
+                loseSource.clip = s.clip;
+                loseSource.Play();
+            }
+            
+        }
+        
         
         public void PlayAmbience(string name)
         {
@@ -124,10 +139,24 @@ public class AudioManageryTest : MonoBehaviour
             }
             
         }
+        
+        public void MuteSFX()
+        {
+            if (sfxSource.mute == false)
+            {
+                sfxSource.mute = true;
+            }
+            else
+            {
+                sfxSource.mute = false;
+            }
+        }
+        
+        
         public void StopMusic(string name)
         {
             Sound s = Array.Find(musicSounds, x => x.name == name);
-            if (musicSource.isPlaying == false)
+            if (musicSource.isPlaying)
             {
                 musicSource.Stop();
             }
@@ -157,6 +186,16 @@ public class AudioManageryTest : MonoBehaviour
             {
                 sirenSource.mute = true;
             }
+        }
+        
+        public void StopSiren(string name)
+        {
+            Sound s = Array.Find(sirenSound, x => x.name == name);
+            if (sirenSource.isPlaying)
+            {
+                sirenSource.Stop();
+            }
+            
         }
 
         /*

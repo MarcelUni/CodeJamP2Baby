@@ -54,6 +54,8 @@ public class AudioManager : MonoBehaviour
             }
             
         }
+        
+        
         public void MuteMusic(string name)
         {
             Sound s = Array.Find(musicSounds, x => x.name == name);
