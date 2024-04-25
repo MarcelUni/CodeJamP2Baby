@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1529998331331908365}
   - component: {fileID: 5053338887240033620}
   - component: {fileID: -9013109697906347150}
+  - component: {fileID: 6506623555619829080}
   m_Layer: 0
   m_Name: GasTank
   m_TagString: Untagged
@@ -29,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7916870572605709947}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.8351627, z: -0, w: 0.550003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 113.266, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7240067563898941989
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -137,3 +138,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac930b07fbe8a6b4fb7ec3c3106039c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &6506623555619829080
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7916870572605709947}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf96e201082764b59a380a66b22b2a16, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

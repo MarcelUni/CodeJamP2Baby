@@ -2831,7 +2831,7 @@ MonoBehaviour:
   _player: {fileID: 1978100554}
   _gameOverScreen: {fileID: 1418646644}
   fuelBar: {fileID: 1236126940}
-  winDistance: 2000
+  winDistance: 2200
   randomEnvironment: {fileID: 7552124374772192048}
 --- !u!1 &1520546261
 GameObject:
@@ -5225,6 +5225,7 @@ GameObject:
   - component: {fileID: 8341054718391320550}
   - component: {fileID: 7552124374772192048}
   - component: {fileID: 4666838627979896589}
+  - component: {fileID: 9056379054986192920}
   m_Layer: 0
   m_Name: Ambulance
   m_TagString: Untagged
@@ -5232,6 +5233,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!81 &9056379054986192920
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056379054986192919}
+  m_Enabled: 1
 --- !u!65 &9174171482766677402
 BoxCollider:
   m_ObjectHideFlags: 0
