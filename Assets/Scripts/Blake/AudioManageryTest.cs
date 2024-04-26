@@ -182,10 +182,16 @@ public class AudioManageryTest : MonoBehaviour
             {
                 sirenSource.mute = false;
             }
-            else
+            
+        }
+        public void MuteSiren(string name)
+        {
+            Sound s = Array.Find(sirenSound, x => x.name == name);
+            if (!sirenSource.mute)
             {
                 sirenSource.mute = true;
             }
+            
         }
         
         public void StopSiren(string name)

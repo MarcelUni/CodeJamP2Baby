@@ -70,7 +70,7 @@ public class FuelManager : MonoBehaviour
             AudioManageryTest.instance.PlayLoseSound("Engine Bust");
             CancelInvoke("DepleteFuel");
             callOnce = false;
-            
+            AudioManageryTest.instance.StopSiren("Siren");
         }
         
     }
