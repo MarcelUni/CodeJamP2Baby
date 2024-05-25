@@ -1,16 +1,11 @@
 using UnityEngine;
 
-public class FuelSpawningScript : MonoBehaviour
+public class FuelSpawningScript : Spawner
 {
-    public GameObject[] fuelPrefabs; // Array of fuel prefabs to spawn
-    public Transform[] spawnPoints; // Array of spawn points
-
-    public Transform playerTransform; // Reference to the player's transform
-    public float despawnDistance = 50f; // Distance at which fuel objects are despawned
 
     public float minSpawnInterval = 7f; // Minimum time interval between spawns
     public float maxSpawnInterval = 15f; // Maximum time interval between spawns
-    private float nextSpawnTime; // Time for the next spawn
+
 
 
     // Start is called before the first frame update
@@ -40,7 +35,7 @@ public class FuelSpawningScript : MonoBehaviour
     void SpawnFuel()
     {
         // Choose a random fuel prefab from the fuelPrefabs array
-        GameObject fuelPrefab = fuelPrefabs[Random.Range(0, fuelPrefabs.Length)];
+        GameObject fuelPrefab = spawnObject[Random.Range(0, spawnObject.Length)];
 
         // Choose a random spawn point from the spawnPoints array
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];

@@ -1,18 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
-public class NPCSpawnSystem : MonoBehaviour
+public class NPCSpawnSystem : Spawner
 {
-    public GameObject[] npcPrefabs; // Array of NPC prefabs to spawn
-    //private NPCSystem npcSystem;
-    public Transform[] spawnPoints; // Array of spawn points
-
-    public Transform playerTransform; // Reference to the player's transform
-    public float despawnDistance = 50f; // Distance at which road segments are despawned
-
     public float spawnInterval = 2f; // Time interval between spawns
-    private float nextSpawnTime; // Time for the next spawn
-
     public float spawnedNPCAmount = 0;
 
 
@@ -61,7 +52,7 @@ public class NPCSpawnSystem : MonoBehaviour
     {
         float randomTime = Random.Range(0, 350);
         // Choose a random NPC prefab from the npcPrefabs array
-        GameObject npcPrefab = npcPrefabs[Random.Range(0, npcPrefabs.Length)];
+        GameObject npcPrefab = spawnObject[Random.Range(0, spawnObject.Length)];
 
         // Choose a random spawn point from the spawnPoints array
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
