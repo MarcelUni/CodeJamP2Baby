@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FuelSpawningScript : Spawner
+public class FuelSpawningScript : SpawnObject
 {
 
     public float minSpawnInterval = 7f; // Minimum time interval between spawns

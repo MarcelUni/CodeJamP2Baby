@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class NPCSpawnSystem : Spawner
+public class NPCSpawnSystem : SpawnObject
 {
     public float spawnInterval = 2f; // Time interval between spawns
     public float spawnedNPCAmount = 0;
