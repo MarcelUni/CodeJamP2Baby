@@ -90,11 +90,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        GameWinCheck();
-    }
-
     //method for adjusting HP
     public void RemoveHP(int num)
     {
@@ -156,15 +151,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("Found GameOver Screen :)");
         }
         */
-    }
-
-    public void GameWinCheck()
-    {
-        if (_player.transform.position.z >= winDistance && SpawnHospital == true)
-        {
-            randomEnvironment.SpawnHospital();
-            SpawnHospital = false;
-        }
     }
     public void ResetGame()
     {

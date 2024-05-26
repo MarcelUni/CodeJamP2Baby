@@ -52,10 +52,13 @@ public class Controller : MonoBehaviour
             RightLane();
         }
 
+        float yThreshold = 0.4f;
+        float zThreshold = 0.4f;
+
         // Jump with Space key
         if (canJump)
         {   
-            if(Input.GetKeyDown(KeyCode.Space) || Input.acceleration.y > 0.4 || Input.acceleration.z > 0.4)
+            if(Input.GetKeyDown(KeyCode.Space) || Input.acceleration.y > yThreshold || Input.acceleration.z > zThreshold)
             {
                 canJump = false; 
                 canCheck = false;
