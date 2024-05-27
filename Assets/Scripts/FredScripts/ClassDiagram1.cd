@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="GameManager">
-    <Position X="11.25" Y="2" Width="1.5" />
-    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true">
+    <Position X="19.25" Y="3.75" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11" Y="1.191" />
-        <Point X="11" Y="1.375" />
-        <Point X="12" Y="1.375" />
-        <Point X="12" Y="2" />
+        <Point X="14.25" Y="3.938" />
+        <Point X="17.625" Y="3.938" />
+        <Point X="17.625" Y="3.938" />
+        <Point X="19.25" Y="3.938" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -16,63 +16,75 @@
     </TypeIdentifier>
   </Class>
   <Class Name="FuelManager">
-    <Position X="2" Y="2" Width="1.75" />
+    <Position X="7" Y="3.75" Width="1.75" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.75" Y="3.938" />
+        <Point X="9.276" Y="3.938" />
+        <Point X="9.276" Y="3.937" />
+        <Point X="8.75" Y="3.937" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAgCAAAAAAABCEAAGAAABAAAAAAIAEAAAAgEE=</HashCode>
+      <HashCode>AAAAAAAAgiAAAAAAABCEAAGAAABAAAAAAIAEAAAAgEE=</HashCode>
       <FileName>Assets\Scripts\FredScripts\FuelManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AudioManageryTest">
-    <Position X="4.75" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AABAAKAAEAQAACgAAAAAAJVASABAACAAAAAAQAAIAEA=</HashCode>
-      <FileName>Assets\Scripts\Blake\AudioManageryTest.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="AudioManager">
-    <Position X="6.5" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAgAAAAAQBEASABAAAAIAAAAQAAAAEA=</HashCode>
-      <FileName>Assets\Scripts\Blake\AudioManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="NPCSystem">
-    <Position X="14.25" Y="2" Width="1.5" />
+    <Position X="15.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EGAAgEAIQiABYAAAAAAAAAABAAAAAYAMQAIAkAEACAA=</HashCode>
       <FileName>Assets\Scripts\JacobScripts\NPCSystem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NPCSpawnSystem">
-    <Position X="15.75" Y="2" Width="1.5" />
+    <Position X="10.75" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAQBAAAAADAEAAAAAAAAAAABAAACAAIAAAIQAAAAFAA=</HashCode>
+      <HashCode>AAQAAAAAACAEAAAAAAAAAAABAAAAAAIAAAIAAAAABAA=</HashCode>
       <FileName>Assets\Scripts\JacobScripts\NPCSpawnSystem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Controller">
-    <Position X="18.25" Y="2" Width="1.5" />
+    <Position X="17.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQQAAEIAiAAAAAEAAAAAAABAgBAAUAMQQAAgAAAAAA=</HashCode>
+      <HashCode>AAQQAAEIAiAAAAAEAAAAAAADAgBAAUAMQQAAgAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Simon Scripts\Controller.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RandomEnvironment">
-    <Position X="9" Y="2" Width="1.5" />
+    <Position X="14" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEQAARAAACEAAoAEAAAIBAAAAEAAQEAAAAAAIAgEgAA=</HashCode>
       <FileName>Assets\Scripts\Marcel\RandomEnvironment.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnityEngine.MonoBehaviour" Collapsed="true">
-    <Position X="10.25" Y="0.5" Width="1.5" />
+  <Class Name="UnityEngine.MonoBehaviour">
+    <Position X="12.75" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier />
   </Class>
-  <Class Name="Sound">
-    <Position X="6.5" Y="6" Width="1.5" />
+  <Class Name="SpawnObject">
+    <Position X="11.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Blake\Sound.cs</FileName>
+      <HashCode>AAABAIAAABAAAAAAAAAAAAAAAAACAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Søren Scripts\SpawnObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FuelSpawningScript">
+    <Position X="12.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAEAAAAAAQAAAAQAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\JacobScripts\FuelSpawningScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManageryTest">
+    <Position X="9" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABAAKAAgAQAACgAAAAAIJVASABAACAACAAAUAAIAEA=</HashCode>
+      <FileName>Assets\Scripts\Blake\AudioManageryTest.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
