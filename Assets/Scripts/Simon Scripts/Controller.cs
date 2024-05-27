@@ -52,7 +52,7 @@ public class Controller : MonoBehaviour
             RightLane();
         }
 
-        // Jump with Space key
+        // Jump with Space key and accelerometer 
         if (canJump)
         {   
             if(Input.GetKeyDown(KeyCode.Space) || Input.acceleration.y > 0.4 || Input.acceleration.z > 0.4)
